@@ -15,6 +15,10 @@ public class TempestFather : MonoBehaviour
     }
 
 
+    [Header("Light")]
+    public Light theLight;
+
+    [Header("Secousse management")]
     public float secousse = 0;
     private float real_secousse = 0;
     public float reduceSecoussePerSecond = 0.33f;
@@ -35,11 +39,14 @@ public class TempestFather : MonoBehaviour
     {
         if (real_secousse > 0)
             real_secousse -= reduceSecoussePerSecond * Time.deltaTime;
+        else
+            real_secousse = 0;
 
         CalculSecousse();
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
             AddSecousse(0.12f);
+        
     }
 
 
