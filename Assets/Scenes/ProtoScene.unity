@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a79b93127b24b14d899686b456b7136, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickingTiming: {x: 1, y: 2}
+  clickingTiming: {x: 4, y: 2}
   aLight: {fileID: 2024041010}
 --- !u!1 &2024041008
 GameObject:

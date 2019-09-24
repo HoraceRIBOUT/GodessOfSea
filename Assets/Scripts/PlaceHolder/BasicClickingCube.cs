@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicClickingCube : MonoBehaviour
 {
-
+    [Tooltip("First value : how long OFF | Second value : how long ON")]
     public Vector2 clickingTiming = new Vector2(1, 2);
     public Light aLight;
     private float intensityAtStart = 1;
@@ -26,10 +26,10 @@ public class BasicClickingCube : MonoBehaviour
     {
         while (true)
         {
-            Sound_StopTempest();
+            Sound_LightOff();
             aLight.intensity = 0;
             yield return new WaitForSeconds(clickingTiming.x);
-            Sound_DoTempest();
+            Sound_LightOn();
             aLight.intensity = intensityAtStart;
             yield return new WaitForSeconds(clickingTiming.y);
         }
@@ -40,12 +40,12 @@ public class BasicClickingCube : MonoBehaviour
 
     }
 
-    void Sound_DoTempest()
+    void Sound_LightOn()
     {
 
     }
 
-    void Sound_StopTempest()
+    void Sound_LightOff()
     {
 
     }
