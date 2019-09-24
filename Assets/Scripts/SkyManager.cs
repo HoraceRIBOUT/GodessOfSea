@@ -7,15 +7,15 @@ public class SkyManager : MonoBehaviour
 
     public Gradient lightColor;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public Camera cameraBackGround;//maybe a sprite no  ?
+
+
+
+
+    public void Update()
     {
-        
+        cameraBackGround.backgroundColor = lightColor.Evaluate(TempestFather.instance.secousse);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
