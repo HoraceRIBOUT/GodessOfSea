@@ -1,0 +1,10 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3157907375	Play_Sea			\Default Work Unit\Play_Sea	
+	3457376640	Play_Innit			\Default Work Unit\Play_Innit	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	278773008	GS_Musique_State_01_Lp	Y:\Desktop\GodessWwise\.cache\Windows\SFX\GS_Musique_State_01_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_State_01\GS_Musique_State_01_Lp\GS_Musique_State_01_Lp		12288144
+	375114438	GS_Musique_State_02_Lp	Y:\Desktop\GodessWwise\.cache\Windows\SFX\GS_Musique_State_02_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_State_02\GS_Musique_State_02_Lp\GS_Musique_State_02_Lp		12288144
+	833265569	GS_Amb_Sea_lp	Y:\Desktop\GodessWwise\.cache\Windows\SFX\GS_Amb_Sea_lp_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\GS_Amb_Sea_lp		2424944
+	1066384859	GS_Musique_State_02_Basse_Lp	Y:\Desktop\GodessWwise\.cache\Windows\SFX\GS_Musique_State_02_Basse_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_State_02\GS_Musique_State_02_Lp\GS_Musique_State_02_Basse_Lp		12288144
+
