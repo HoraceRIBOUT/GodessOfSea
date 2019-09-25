@@ -23,6 +23,8 @@ public class EditorUpdate : Editor
             w.id = "Waves n°" + num++;
             w.time = time;
             time += w.duration;
+            //if(w.current)
+
         }
 
     }

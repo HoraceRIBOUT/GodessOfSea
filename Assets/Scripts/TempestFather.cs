@@ -15,8 +15,12 @@ public class TempestFather : MonoBehaviour
     }
 
 
-    [Header("Light")]
+    [Header("Object needed to be accessible")]
     public Light theLight;
+
+    [Header("Value for everybody")]
+    public float score = 0;
+    public bool canShake = false;
 
     [Header("Secousse management")]
     public float secousse = 0;
@@ -37,15 +41,32 @@ public class TempestFather : MonoBehaviour
 
     public void Update()
     {
-        if (real_secousse > 0)
-            real_secousse -= reduceSecoussePerSecond * Time.deltaTime;
+        if (gameOver)
+        {
+            if (Input.GetKey(KeyCode.UpArrow))
+                AddSecousse(0.33f * Time.deltaTime);
+            else if(real_secousse > 0)
+                real_secousse -= reduceSecoussePerSecond * Time.deltaTime;
+            else
+                real_secousse = 0;
+
+            textDecompte.text = (real_secousse < (1f/ 3f)) ? "3" : ((real_secousse < (2f / 3f)) ? "2": ((real_secousse < (3f/3f)) ? "1" : "0"));
+
+            if (real_secousse >= 1)
+                Restart();
+        }
         else
-            real_secousse = 0;
+        {
+            if (real_secousse > 0)
+                real_secousse -= reduceSecoussePerSecond * Time.deltaTime * (canShake ? 1 : 0.5f);
+            else
+                real_secousse = 0;
 
-        CalculSecousse();
+            CalculSecousse();
 
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-            AddSecousse(0.12f);
+            if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
+                AddSecousse(0.12f);
+        }
         
     }
 
@@ -55,4 +76,34 @@ public class TempestFather : MonoBehaviour
         float target_secousse = secoussePower.Evaluate(real_secousse);
         secousse = (asymptotic_value * secousse) + ((1 - asymptotic_value) * target_secousse);
     }
+
+
+
+    #region GAMEOVER PART
+    [Header("GameOver")]
+    public bool gameOver = false;
+
+    public GameObject gameOverUI;
+    public UnityEngine.UI.Text textDecompte;
+
+    public void DisplayGameOver()
+    {
+        gameOverUI.SetActive(true);
+
+        real_secousse = 0;
+        //pas de calcul de secousse
+
+        gameOver = true;
+    }
+
+    public void Restart()
+    {
+        //do a smooth restart ! 
+        //not on my watch !
+        //YOLOOOOOO
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
+    }
+
+
+    #endregion
 }
