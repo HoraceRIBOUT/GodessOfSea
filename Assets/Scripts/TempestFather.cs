@@ -9,7 +9,11 @@ public class TempestFather : MonoBehaviour
     public void Awake()
     {
         if (TempestFather.instance == null)
+        {
             TempestFather.instance = this;
+            AkSoundEngine.PostEvent(startEvent.Id, gameObject);
+            AkSoundEngine.PostEvent(musicEvent.Id, gameObject);
+        }
         else
             Destroy(this.gameObject);
     }
@@ -22,12 +26,28 @@ public class TempestFather : MonoBehaviour
     public float score = 0;
     public bool canShake = false;
 
+    public int currentLevel = 0;
+    public float intensity = 0;
+    public float[] seuilForEachLevel = new float[3];
+
     [Header("Secousse management")]
     public float secousse = 0;
     private float real_secousse = 0;
     public float reduceSecoussePerSecond = 0.33f;
     public AnimationCurve secoussePower = AnimationCurve.Linear(0, 0, 1, 1);
     public float asymptotic_value = 0.90f;
+
+
+    [Header("UI slider")]
+    public UnityEngine.UI.Slider sliderSecousse;
+    public UnityEngine.UI.Image sliderBG;
+    public Gradient secousseGradient;
+
+    [Header("Sound")]
+    public AK.Wwise.Event startEvent;
+    public AK.Wwise.Event musicEvent;
+    public AK.Wwise.Switch switchForSeuil;
+
 
 
     public void AddSecousse(float add)
@@ -67,6 +87,7 @@ public class TempestFather : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
                 AddSecousse(0.12f);
         }
+
         
     }
 
@@ -75,6 +96,9 @@ public class TempestFather : MonoBehaviour
     {
         float target_secousse = secoussePower.Evaluate(real_secousse);
         secousse = (asymptotic_value * secousse) + ((1 - asymptotic_value) * target_secousse);
+
+        sliderSecousse.value = secousse;
+        sliderBG .color = secousseGradient.Evaluate(secousse);
     }
 
 
