@@ -17,13 +17,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 63055c9a76623d49be431fe2e5d90e12
     GuidInternal: 
-    m_lastTime: -8586322012664775808
+    m_lastTime: -8586321892264775808
     List: []
   - PhysicalPath: Virtual Acoustics/Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586362428204775808
+    m_lastTime: -8586321892264775808
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -184,34 +184,76 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 67db8b189c3db746a5ce0fe0cecaca3c
     GuidInternal: 
-    m_lastTime: -8586322012534775808
+    m_lastTime: -8586321892274775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fa16e16c01b2b4b95b17760d484eebc
     GuidInternal: 
-    m_lastTime: -8586322012664775808
-    List: []
+    m_lastTime: -8586321827784775808
+    List:
+    - name: Main
+      guid: ecff5f47a2b7d6499d6645a2eda787f7
+      id: 3161908922
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Main
+        ObjectType: 7
+      Path: Default Work Unit/Main
+    - name: Menu
+      guid: c97693250a24ab4f974551cf4b72c5d1
+      id: 2607556080
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Menu
+        ObjectType: 7
+      Path: Default Work Unit/Menu
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d7a7a2a703d27b4ebda8de717a28b67a
     GuidInternal: 
-    m_lastTime: -8586322012664775808
-    List: []
+    m_lastTime: -8586321827784775808
+    List:
+    - name: Play_Innit
+      guid: b8a2b6c8b6e9194d97efe185cc78e5c9
+      id: 3457376640
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Innit
+        ObjectType: 3
+      Path: Default Work Unit/Play_Innit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Sea
+      guid: 17b142704144e74fb7dfffd37a75e595
+      id: 3157907375
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Sea
+        ObjectType: 3
+      Path: Default Work Unit/Play_Sea
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4767981791384c43a3dd702e60c15797
     GuidInternal: 
-    m_lastTime: -8586322012664775808
+    m_lastTime: -8586321892264775808
     List: []
   - PhysicalPath: Game Parameters/Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586362428204775808
+    m_lastTime: -8586321892264775808
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -235,7 +277,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586362428204775808
+    m_lastTime: -8586321892264775808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -332,22 +374,57 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 49c63c4fa51f5b44af35e49252ef4be2
     GuidInternal: 
-    m_lastTime: -8586322012664775808
+    m_lastTime: -8586321892264775808
     List: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e6acf31769ba0d468b2cca9817fb6a35
     GuidInternal: 
-    m_lastTime: -8586322012664775808
-    List: []
+    m_lastTime: -8586321876734775808
+    List:
+    - name: Music_State
+      guid: e18fb2c9e3471b40a807cb8de3517ac3
+      id: 3826569560
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_State
+        ObjectType: 11
+      Path: Default Work Unit/Music_State
+      values:
+      - name: State_01
+        guid: 65488d6c7bdfdd478a63a0743d106319
+        id: 3794091078
+        PathAndIcons:
+        - ElementName: State_01
+          ObjectType: 10
+      - name: State_02
+        guid: c8690a7217f60645a3ca1675794fd69d
+        id: 3794091077
+        PathAndIcons:
+        - ElementName: State_02
+          ObjectType: 10
+      - name: State_03
+        guid: 38ed1281fa20a64188b960976e6c5851
+        id: 3794091076
+        PathAndIcons:
+        - ElementName: State_03
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d4d3ea0e7e30fe4eb60d99a5a75b059d
     GuidInternal: 
-    m_lastTime: -8586322012664775808
+    m_lastTime: -8586321892264775808
     List: []
-  ExpandedItems: []
+  ExpandedItems:
+  - /GodessWwise
+  - /GodessWwise/Switches
+  - /GodessWwise/Switches/Default Work Unit
+  - /GodessWwise/Switches/Default Work Unit/Music_State
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
