@@ -9,7 +9,11 @@ public class TempestFather : MonoBehaviour
     public void Awake()
     {
         if (TempestFather.instance == null)
+        {
             TempestFather.instance = this;
+            AkSoundEngine.PostEvent(startEvent.Id, gameObject);
+            AkSoundEngine.PostEvent(musicEvent.Id, gameObject);
+        }
         else
             Destroy(this.gameObject);
     }
@@ -38,6 +42,12 @@ public class TempestFather : MonoBehaviour
     public UnityEngine.UI.Slider sliderSecousse;
     public UnityEngine.UI.Image sliderBG;
     public Gradient secousseGradient;
+
+    [Header("Sound")]
+    public AK.Wwise.Event startEvent;
+    public AK.Wwise.Event musicEvent;
+    public AK.Wwise.Switch switchForSeuil;
+
 
 
     public void AddSecousse(float add)
