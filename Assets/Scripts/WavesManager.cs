@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class WavesManager : MonoBehaviour
 {
-    public List<Transform> waveeees;
+    //public List<Transform> waveeees;
+    public List<Animator> waveeees;
 
     public List<GameObject> randomWaves;
 
@@ -23,6 +24,24 @@ public class WavesManager : MonoBehaviour
     public void Start()
     {
         StartCoroutine(WavesByWavesOnWavesList());
+
+        int i = 0;
+        foreach (Animator animWav in waveeees)
+        {
+            float index = i++;
+            float value = (((index) / waveeees.Count) * 0.3f);
+            print(value);
+            animWav.speed = 1f - value;
+        }
+    }
+
+    public void Update()
+    {
+        foreach(Animator animWav in waveeees)
+        {
+            animWav.SetLayerWeight(0, 1 - TempestFather.instance.secousse);
+            animWav.SetLayerWeight(1, TempestFather.instance.secousse);
+        }
     }
 
     private IEnumerator WavesByWavesOnWavesList()
