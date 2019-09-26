@@ -62,10 +62,7 @@ public class WavesManager : MonoBehaviour
 
     public void DoWaves(Waves wavesData)
     {
-        TempestFather.instance.canShake = wavesData.light_on; // to make it in a way that when we change it, it change the light, could be way better
-        //So, this one
-        TempestFather.instance.theLight.enabled = wavesData.light_on;
-        //that's it
+        TempestFather.instance.LightChange(wavesData.light_on);
     }
 
 

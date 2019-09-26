@@ -29,6 +29,7 @@ public class TempestFather : MonoBehaviour
     [Range(0,100)]
     public float pluviometre = 0;
     public float reducePluviometrePerSecond = 0.33f;
+    public AnimationCurve changePluviometrePerSecond;
     public float reducePluviometreWhenLightOff = -0.2f;
     public int currentPalier = 0;
     public float[] seuilForEachPalier = new float[3];
@@ -45,6 +46,10 @@ public class TempestFather : MonoBehaviour
     public UnityEngine.UI.Slider sliderIntensite;
     public UnityEngine.UI.Image sliderBG;
     public Gradient intensiteGradient;
+    
+    public UnityEngine.UI.Slider sliderPluviometre;
+    public UnityEngine.UI.Image sliderPlBG;
+    public Gradient pluviometreGradient;
 
     [Header("Sound")]
     public AK.Wwise.Event startEvent;
@@ -107,21 +112,34 @@ public class TempestFather : MonoBehaviour
         sliderIntensite.value = intensite;
         sliderBG .color = intensiteGradient.Evaluate(intensite);
     }
-
+    
     void CalculPluviometre()
     {
         if (canShake)
         {
-            pluviometre += intensite;
-            pluviometre -= reducePluviometrePerSecond;
+            pluviometre += changePluviometrePerSecond.Evaluate(intensite) * Time.deltaTime;
         }
         else
         {
-            pluviometre += intensite * reducePluviometreWhenLightOff;
+            pluviometre += intensite * reducePluviometreWhenLightOff * Time.deltaTime;
         }
         pluviometre = Mathf.Max(0, pluviometre);
+        pluviometre = Mathf.Min(100, pluviometre);
+
+        sliderPluviometre.value = pluviometre/100;
+        sliderPlBG.color = pluviometreGradient.Evaluate(pluviometre / 100);
     }
 
+    public void LightChange(bool on)
+    {
+        canShake = on;
+        theLight.enabled = on;
+
+
+        sliderIntensite.gameObject.SetActive(on);
+        intensite = 0.5f;
+        sliderIntensite.value = 0.5f;
+    }
 
     #region GAMEOVER PART
     [Header("GameOver")]
