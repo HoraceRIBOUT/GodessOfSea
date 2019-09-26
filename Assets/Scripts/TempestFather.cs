@@ -34,6 +34,9 @@ public class TempestFather : MonoBehaviour
     public int currentPalier = 0;
     public float[] seuilForEachPalier = new float[3];
 
+    public bool ignoringMovement = false;
+    public float delayForIgnoring = 1f;
+
     [Header("Intensite management")]
     public float intensite = 0;
     private float real_intensite = 0;
@@ -74,8 +77,8 @@ public class TempestFather : MonoBehaviour
         if (gameOver)
         {
             //TO DO : change that TOO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            /*if (Input.GetKey(KeyCode.UpArrow))
-                AddIntensite(0.33f * Time.deltaTime);*/
+            if (Input.GetKey(KeyCode.UpArrow))
+                AddIntensite(0.33f * Time.deltaTime);
             //
             float magnit = InputManager.wiimoteInput.magnitude;
             if (magnit > seuil)
@@ -93,16 +96,16 @@ public class TempestFather : MonoBehaviour
         }
         else
         {
-            if (real_intensite > 0)
+            if (real_intensite > 0 && !ignoringMovement)
                 real_intensite -= reduceIntensitePerSecond * Time.deltaTime * (canShake ? 1 : 0.5f);
-            else
+            else if(!ignoringMovement)
                 real_intensite = 0;
 
             Calculntensite();
 
             //TO DO : change that here                          !!!!!!!!!!!!!!!!!!!!!!!
-            /*if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
-                AddIntensite(0.12f);*/
+            if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
+                AddIntensite(0.12f);
             //
             float magnit = InputManager.wiimoteInput.magnitude;
             if (magnit > seuil && canShake)
@@ -130,7 +133,7 @@ public class TempestFather : MonoBehaviour
         {
             pluviometre += changePluviometrePerSecond.Evaluate(intensite) * Time.deltaTime;
         }
-        else
+        else if(!ignoringMovement)
         {
             pluviometre += intensite * reducePluviometreWhenLightOff * Time.deltaTime;
         }
@@ -148,8 +151,16 @@ public class TempestFather : MonoBehaviour
 
 
         sliderIntensite.gameObject.SetActive(on);
-        intensite = 0.5f;
-        sliderIntensite.value = 0.5f;
+        //intensite = 0.5f;
+        //sliderIntensite.value = 0.5f;
+
+        ignoringMovement = true;
+        Invoke("StopIgnoreMovement", delayForIgnoring);
+    }
+
+    void StopIgnoreMovement()
+    {
+        ignoringMovement = false;
     }
 
     #region GAMEOVER PART
