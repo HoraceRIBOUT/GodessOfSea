@@ -984,27 +984,18 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: -0.33
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.26076174
-    - serializedVersion: 3
-      time: 0.4
-      value: 0
-      inSlope: 1.4080936
-      outSlope: 1.4080936
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.14517806
-      outWeight: 0.16770874
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
-      value: 3
-      inSlope: 5
-      outSlope: 5
+      value: 2
+      inSlope: 2
+      outSlope: 2
       tangentMode: 34
       weightedMode: 0
       inWeight: 0.33333334
@@ -1012,13 +1003,16 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  reducePluviometreWhenLightOff: -1
-  currentPalier: 0
+  reducePluviometreWhenLightOff: -30
+  currentPalier: 1
   seuilForEachPalier:
-  - 0
-  - 0
-  - 0
+  - 33
+  - 66
+  - 100
+  ignoringMovement: 0
+  delayForIgnoring: 1
   intensite: 0
+  badIntensite: 0
   reduceIntensitePerSecond: 0.33
   intensitePower:
     serializedVersion: 2
@@ -1121,6 +1115,40 @@ MonoBehaviour:
     groupIdInternal: 0
     groupGuidInternal: 
     WwiseObjectReference: {fileID: 0}
+  seuilForWiimoteDetection: 1.2
+  wiimoteInputCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.2
+      value: 0
+      inSlope: 0
+      outSlope: 1.1363636
+      tangentMode: 65
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 10
+      value: 10
+      inSlope: 1.1363636
+      outSlope: 1.1363636
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   gameOver: 0
   gameOverUI: {fileID: 383201616}
   textDecompte: {fileID: 1503197285}
@@ -1922,13 +1950,23 @@ MonoBehaviour:
     current: 0
   - id: "Waves n\xB03"
     light_on: 1
-    duration: 120
+    duration: 10
     time: 7
     current: 0
   - id: "Waves n\xB04"
     light_on: 0
-    duration: 2
-    time: 127
+    duration: 5
+    time: 17
+    current: 0
+  - id: "Waves n\xB05"
+    light_on: 1
+    duration: 10
+    time: 22
+    current: 0
+  - id: "Waves n\xB06"
+    light_on: 0
+    duration: 20
+    time: 32
     current: 0
 --- !u!4 &959197628
 Transform:
@@ -2033,11 +2071,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6712c295b64b3bf42ad3b274dcdb05a8, type: 3}
---- !u!4 &997120051 stripped
+--- !u!4 &997120051
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 997120050}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450002458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2004815727}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1014303274
 GameObject:
   m_ObjectHideFlags: 0
@@ -2197,7 +2244,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2024041009}
-  - {fileID: 997120051}
+  - {fileID: 2004815727}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2798,6 +2845,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1450002458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 997120050}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997120051}
+  m_Layer: 0
+  m_Name: Missing Prefab (Dummy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1503197283
 GameObject:
   m_ObjectHideFlags: 0
@@ -12646,8 +12709,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 257251752}
+  m_Children: []
   m_Father: {fileID: 1970135894}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12940,7 +13002,7 @@ MonoBehaviour:
   m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 781803626}
-  m_HandleRect: {fileID: 257251752}
+  m_HandleRect: {fileID: 0}
   m_Direction: 2
   m_MinValue: 0
   m_MaxValue: 1
@@ -12951,6 +13013,37 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &2004815726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 997120050}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004815727}
+  m_Layer: 0
+  m_Name: balise_1 (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2004815727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 997120050}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004815726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 997120051}
+  m_Father: {fileID: 1065476908}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2024041008
 GameObject:
   m_ObjectHideFlags: 0

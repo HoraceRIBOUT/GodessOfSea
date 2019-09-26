@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TempestFather : MonoBehaviour
+public class FalseTmpstFath : MonoBehaviour
 {
-    public static TempestFather instance;
+    public static FalseTmpstFath instance;
 
     public void Awake()
     {
-        if (TempestFather.instance == null)
+        if (FalseTmpstFath.instance == null)
         {
-            TempestFather.instance = this;
+            FalseTmpstFath.instance = this;
             AkSoundEngine.PostEvent(startEvent.Id, gameObject);
             AkSoundEngine.PostEvent(musicEvent.Id, gameObject);
         }
@@ -26,12 +26,12 @@ public class TempestFather : MonoBehaviour
     public float score = 0;
     public bool canShake = false;
 
-    [Range(0,100)]
+    [Range(0, 100)]
     public float pluviometre = 0;
     public float reducePluviometrePerSecond = 0.33f;
     public AnimationCurve changePluviometrePerSecond;
     public float reducePluviometreWhenLightOff = -0.2f;
-    public int currentPalier = 1;
+    public int currentPalier = 0;
     public float[] seuilForEachPalier = new float[3];
 
     public bool ignoringMovement = false;
@@ -39,7 +39,6 @@ public class TempestFather : MonoBehaviour
 
     [Header("Intensite management")]
     public float intensite = 0;
-    public float badIntensite = 0;
     private float real_intensite = 0;
     public float reduceIntensitePerSecond = 0.33f;
     public AnimationCurve intensitePower = AnimationCurve.Linear(0, 0, 1, 1);
@@ -50,7 +49,7 @@ public class TempestFather : MonoBehaviour
     public UnityEngine.UI.Slider sliderIntensite;
     public UnityEngine.UI.Image sliderBG;
     public Gradient intensiteGradient;
-    
+
     public UnityEngine.UI.Slider sliderPluviometre;
     public UnityEngine.UI.Image sliderPlBG;
     public Gradient pluviometreGradient;
@@ -62,51 +61,19 @@ public class TempestFather : MonoBehaviour
 
     [Header("Wiimote gestion")]
     public float seuilForWiimoteDetection = 1f;
-    public AnimationCurve wiimoteInputCurve;
 
     public void Update()
     {
-        if (!gameOver)
+        if (gameOver)
         {
-            if (real_intensite > 0)
-            {
-                real_intensite -= reduceIntensitePerSecond * Time.deltaTime * (canShake ? 1 : 0);
-            }
-            else
-                real_intensite = 0;
-
-            Calculntensite();
-
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-                if (canShake)
-                    AddIntensite(0.12f);
-                else
-                    badIntensite += 0.12f;
-            
-            //WII
+            //TO DO : change that TOO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Input.GetKey(KeyCode.UpArrow))
+                AddIntensite(0.33f * Time.deltaTime);
+            //
             float magnit = InputManager.wiimoteInput.magnitude;
-            if ((magnit > seuilForWiimoteDetection) && canShake)
-                if (canShake)
-                    AddIntensite(wiimoteInputCurve.Evaluate(magnit) * Time.deltaTime);
-                else
-                    badIntensite += wiimoteInputCurve.Evaluate(magnit) * Time.deltaTime;
-
-            //END WII
-
-            CalculPluviometre();
-        }
-        else
-        {
-            float magnit = InputManager.wiimoteInput.magnitude;
-            if (Input.GetKey(KeyCode.UpArrow) || magnit > seuilForWiimoteDetection)
-            {
-                if (Input.GetKey(KeyCode.UpArrow))
-                    AddIntensite(0.33f * Time.deltaTime);
-                //WII
-                if (magnit > seuilForWiimoteDetection)
-                    AddIntensite(0.33f * Time.deltaTime);
-                //END WII
-            }
+            if (magnit > seuilForWiimoteDetection)
+                AddIntensite((magnit / 9.0f) * Time.deltaTime);
+            //
             else if (real_intensite > 0)
                 real_intensite -= reduceIntensitePerSecond * Time.deltaTime;
             else
@@ -116,6 +83,28 @@ public class TempestFather : MonoBehaviour
 
             if (real_intensite >= 1)
                 Restart();
+        }
+        else
+        {
+            if (real_intensite > 0 /*&& !ignoringMovement*/)
+            {
+                real_intensite -= reduceIntensitePerSecond * Time.deltaTime * (canShake ? 1 : 0);
+                Debug.Log("Eh : " + real_intensite);
+            }
+            else //if(!ignoringMovement)
+                real_intensite = 0;
+
+            Calculntensite();
+
+            //TO DO : change that here                          !!!!!!!!!!!!!!!!!!!!!!!
+            if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
+                AddIntensite(0.12f);
+            //
+            float magnit = InputManager.wiimoteInput.magnitude;
+            if ((magnit > seuilForWiimoteDetection) && canShake)
+                AddIntensite((magnit / 3.0f) * Time.deltaTime);
+            //
+            CalculPluviometre();
         }
 
 
@@ -132,28 +121,22 @@ public class TempestFather : MonoBehaviour
 
     void Calculntensite()
     {
-        float target_intensite = intensitePower.Evaluate(real_intensite);
-        intensite = (asymptotic_value * intensite) + ((1 - asymptotic_value) * target_intensite);
+        float target_intense = intensitePower.Evaluate(real_intensite);
+        intensite = (asymptotic_value * intensite) + ((1 - asymptotic_value) * target_intense);
 
         sliderIntensite.value = intensite;
         sliderBG.color = intensiteGradient.Evaluate(intensite);
     }
-    
+
     void CalculPluviometre()
     {
         if (canShake)
         {
             pluviometre += changePluviometrePerSecond.Evaluate(intensite) * Time.deltaTime;
         }
-        else
+        else// if(!ignoringMovement)
         {
-            if(badIntensite != 0)
-            {
-                Debug.Log("pluviometre go down : " + pluviometre);
-                pluviometre += badIntensite * reducePluviometreWhenLightOff * Time.deltaTime;
-                badIntensite = 0;
-                Debug.Log("pluviometre is down : " + pluviometre);
-            }
+            pluviometre += intensite * reducePluviometreWhenLightOff * Time.deltaTime;
         }
         pluviometre = Mathf.Max(0, pluviometre);
         pluviometre = Mathf.Min(100, pluviometre);
@@ -162,11 +145,7 @@ public class TempestFather : MonoBehaviour
         sliderPlBG.color = pluviometreGradient.Evaluate(pluviometre / 100);
 
         //seuil !
-        if (currentPalier != 3 && pluviometre > seuilForEachPalier[currentPalier - 1])
-        {
-            currentPalier++;
-            //Do everything about it
-        }
+
     }
 
     public void LightChange(bool on)
@@ -176,8 +155,8 @@ public class TempestFather : MonoBehaviour
 
 
         sliderIntensite.gameObject.SetActive(on);
-        real_intensite = 0f;
-        Calculntensite();
+        //intensite = 0.5f;
+        //sliderIntensite.value = 0.5f;
 
         ignoringMovement = true;
         Invoke("StopIgnoreMovement", delayForIgnoring);

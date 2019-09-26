@@ -30,7 +30,6 @@ public class WavesManager : MonoBehaviour
         {
             float index = i++;
             float value = (((index) / waveeees.Count) * 0.3f);
-            print(value);
             animWav.speed = 1f - value;
         }
     }
@@ -39,8 +38,8 @@ public class WavesManager : MonoBehaviour
     {
         foreach(Animator animWav in waveeees)
         {
-            animWav.SetLayerWeight(0, 1 - TempestFather.instance.intensite);
-            animWav.SetLayerWeight(1, TempestFather.instance.intensite);
+            animWav.SetLayerWeight(0, 1 - (TempestFather.instance.pluviometre/100f));
+            animWav.SetLayerWeight(1, (TempestFather.instance.pluviometre/100f));
         }
     }
 
