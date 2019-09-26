@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
 	public static int whichRemote;
+	public static Vector3 wiimoteInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,11 @@ public class InputManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      Vector3 input = Wii.GetWiimoteAcceleration(whichRemote);
+      wiimoteInput = Wii.GetWiimoteAcceleration(whichRemote);
         //Debug.Log(input);
           //Wii.ToggleRumble(whichRemote);
-          if (input.z > 3.0f || input.z < -3.0f){//Decided arbitrarily through tests
+					//TODO : refine/polish
+          if (wiimoteInput.z > 3.0f || wiimoteInput.z < -3.0f){//Decided arbitrarily
             Debug.Log("Input?");
           }
     }
