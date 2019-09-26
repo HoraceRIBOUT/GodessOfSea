@@ -172,7 +172,7 @@ public class TempestFather : MonoBehaviour
     public void LightChange(bool on)
     {
         canShake = on;
-        theLight.enabled = on;
+        theLight.gameObject.SetActive(on);
 
 
         sliderIntensite.gameObject.SetActive(on);
