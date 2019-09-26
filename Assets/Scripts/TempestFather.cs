@@ -67,13 +67,20 @@ public class TempestFather : MonoBehaviour
     }
 
 
+    public float seuil = 1f;
+
     public void Update()
     {
         if (gameOver)
         {
             //TO DO : change that TOO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            if (Input.GetKey(KeyCode.UpArrow))
-                AddIntensite(0.33f * Time.deltaTime);
+            /*if (Input.GetKey(KeyCode.UpArrow))
+                AddIntensite(0.33f * Time.deltaTime);*/
+            //
+            float magnit = InputManager.wiimoteInput.magnitude;
+            if (magnit > seuil)
+                AddIntensite((magnit / 9.0f)* Time.deltaTime);
+            //
             else if(real_intensite > 0)
                 real_intensite -= reduceIntensitePerSecond * Time.deltaTime;
             else
@@ -94,9 +101,13 @@ public class TempestFather : MonoBehaviour
             Calculntensite();
 
             //TO DO : change that here                          !!!!!!!!!!!!!!!!!!!!!!!
-            if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
-                AddIntensite(0.12f);
-
+            /*if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
+                AddIntensite(0.12f);*/
+            //
+            float magnit = InputManager.wiimoteInput.magnitude;
+            if (magnit > seuil && canShake)
+                AddIntensite((magnit / 3.0f) * Time.deltaTime);
+            //
             CalculPluviometre();
         }
 
