@@ -26,22 +26,25 @@ public class TempestFather : MonoBehaviour
     public float score = 0;
     public bool canShake = false;
 
-    public int currentLevel = 0;
-    public float intensity = 0;
-    public float[] seuilForEachLevel = new float[3];
+    [Range(0,100)]
+    public float pluviometre = 0;
+    public float reducePluviometrePerSecond = 0.33f;
+    public float reducePluviometreWhenLightOff = -0.2f;
+    public int currentPalier = 0;
+    public float[] seuilForEachPalier = new float[3];
 
-    [Header("Secousse management")]
-    public float secousse = 0;
-    private float real_secousse = 0;
-    public float reduceSecoussePerSecond = 0.33f;
-    public AnimationCurve secoussePower = AnimationCurve.Linear(0, 0, 1, 1);
+    [Header("Intensite management")]
+    public float intensite = 0;
+    private float real_intensite = 0;
+    public float reduceIntensitePerSecond = 0.33f;
+    public AnimationCurve intensitePower = AnimationCurve.Linear(0, 0, 1, 1);
     public float asymptotic_value = 0.90f;
 
 
     [Header("UI slider")]
-    public UnityEngine.UI.Slider sliderSecousse;
+    public UnityEngine.UI.Slider sliderIntensite;
     public UnityEngine.UI.Image sliderBG;
-    public Gradient secousseGradient;
+    public Gradient intensiteGradient;
 
     [Header("Sound")]
     public AK.Wwise.Event startEvent;
@@ -50,11 +53,11 @@ public class TempestFather : MonoBehaviour
 
 
 
-    public void AddSecousse(float add)
+    public void AddIntensite(float add)
     {
-        real_secousse += add;
-        if (real_secousse > 1)
-            real_secousse = 1;
+        real_intensite += add;
+        if (real_intensite > 1)
+            real_intensite = 1;
 
     }
 
@@ -63,44 +66,61 @@ public class TempestFather : MonoBehaviour
     {
         if (gameOver)
         {
+            //TO DO : change that TOO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             if (Input.GetKey(KeyCode.UpArrow))
-                AddSecousse(0.33f * Time.deltaTime);
-            else if(real_secousse > 0)
-                real_secousse -= reduceSecoussePerSecond * Time.deltaTime;
+                AddIntensite(0.33f * Time.deltaTime);
+            else if(real_intensite > 0)
+                real_intensite -= reduceIntensitePerSecond * Time.deltaTime;
             else
-                real_secousse = 0;
+                real_intensite = 0;
 
-            textDecompte.text = (real_secousse < (1f/ 3f)) ? "3" : ((real_secousse < (2f / 3f)) ? "2": ((real_secousse < (3f/3f)) ? "1" : "0"));
+            textDecompte.text = (real_intensite < (1f/ 3f)) ? "3" : ((real_intensite < (2f / 3f)) ? "2": ((real_intensite < (3f/3f)) ? "1" : "0"));
 
-            if (real_secousse >= 1)
+            if (real_intensite >= 1)
                 Restart();
         }
         else
         {
-            if (real_secousse > 0)
-                real_secousse -= reduceSecoussePerSecond * Time.deltaTime * (canShake ? 1 : 0.5f);
+            if (real_intensite > 0)
+                real_intensite -= reduceIntensitePerSecond * Time.deltaTime * (canShake ? 1 : 0.5f);
             else
-                real_secousse = 0;
+                real_intensite = 0;
 
-            CalculSecousse();
+            Calculntensite();
 
+            //TO DO : change that here                          !!!!!!!!!!!!!!!!!!!!!!!
             if (Input.GetKeyDown(KeyCode.UpArrow) && canShake)
-                AddSecousse(0.12f);
+                AddIntensite(0.12f);
+
+            CalculPluviometre();
         }
 
         
     }
 
 
-    void CalculSecousse()
+    void Calculntensite()
     {
-        float target_secousse = secoussePower.Evaluate(real_secousse);
-        secousse = (asymptotic_value * secousse) + ((1 - asymptotic_value) * target_secousse);
+        float target_intense = intensitePower.Evaluate(real_intensite);
+        intensite = (asymptotic_value * intensite) + ((1 - asymptotic_value) * target_intense);
 
-        sliderSecousse.value = secousse;
-        sliderBG .color = secousseGradient.Evaluate(secousse);
+        sliderIntensite.value = intensite;
+        sliderBG .color = intensiteGradient.Evaluate(intensite);
     }
 
+    void CalculPluviometre()
+    {
+        if (canShake)
+        {
+            pluviometre += intensite;
+            pluviometre -= reducePluviometrePerSecond;
+        }
+        else
+        {
+            pluviometre += intensite * reducePluviometreWhenLightOff;
+        }
+        pluviometre = Mathf.Max(0, pluviometre);
+    }
 
 
     #region GAMEOVER PART
@@ -114,8 +134,8 @@ public class TempestFather : MonoBehaviour
     {
         gameOverUI.SetActive(true);
 
-        real_secousse = 0;
-        //pas de calcul de secousse
+        real_intensite = 0;
+        //pas de calcul d'intensité
 
         gameOver = true;
     }

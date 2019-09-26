@@ -39,8 +39,8 @@ public class WavesManager : MonoBehaviour
     {
         foreach(Animator animWav in waveeees)
         {
-            animWav.SetLayerWeight(0, 1 - TempestFather.instance.secousse);
-            animWav.SetLayerWeight(1, TempestFather.instance.secousse);
+            animWav.SetLayerWeight(0, 1 - TempestFather.instance.intensite);
+            animWav.SetLayerWeight(1, TempestFather.instance.intensite);
         }
     }
 

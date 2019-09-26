@@ -15,7 +15,7 @@ public class SkyManager : MonoBehaviour
 
     public void Update()
     {
-        cameraBackGround.backgroundColor = lightColor.Evaluate(TempestFather.instance.secousse);
+        cameraBackGround.backgroundColor = lightColor.Evaluate(TempestFather.instance.intensite);
     }
 
 }
