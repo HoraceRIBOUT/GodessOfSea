@@ -2566,23 +2566,13 @@ MonoBehaviour:
     current: 0
   - id: "Waves n\xB023"
     light_on: 1
-    duration: 8
+    duration: 11
     time: 107
     current: 0
   - id: "Waves n\xB024"
     light_on: 0
-    duration: 5
-    time: 115
-    current: 0
-  - id: "Waves n\xB025"
-    light_on: 1
-    duration: 10
-    time: 120
-    current: 0
-  - id: "Waves n\xB026"
-    light_on: 0
-    duration: 2
-    time: 130
+    duration: 1
+    time: 118
     current: 0
 --- !u!4 &959197628
 Transform:
