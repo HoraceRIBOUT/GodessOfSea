@@ -248,7 +248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &56745825
 GameObject:
@@ -1066,6 +1066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8303a587970c447a5d23a5bdb40d94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DEBUG_MODE: 1
   theLight: {fileID: 2024041010}
   score: 0
   canShake: 0
@@ -1241,6 +1242,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  dbg_info_WiiInput: {fileID: 1887569768}
   gameOver: 0
   gameOverUI: {fileID: 383201616}
   textDecompte: {fileID: 1503197285}
@@ -1409,7 +1411,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &677976065
 GameObject:
@@ -1961,6 +1963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881993622}
+  - component: {fileID: 881993623}
   m_Layer: 0
   m_Name: Cloud
   m_TagString: Untagged
@@ -1985,9 +1988,56 @@ Transform:
   - {fileID: 1056138352}
   - {fileID: 296605143}
   - {fileID: 1652708317}
+  - {fileID: 1631206490}
   m_Father: {fileID: 1088217336}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &881993623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881993621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4a89d2af5564e47811051b8584716b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightColor:
+    serializedVersion: 2
+    key0: {r: 0.10196079, g: 0.427451, b: 0.80392164, a: 1}
+    key1: {r: 0.0627451, g: 0.078431375, b: 0.18431373, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  cameraBackGround: {fileID: 519420031}
+  pluieStep:
+  - {fileID: 2109388863}
+  - {fileID: 1819750995}
+  - {fileID: 1631206489}
 --- !u!1 &959197626
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,13 +2102,13 @@ MonoBehaviour:
     current: 0
   - id: "Waves n\xB05"
     light_on: 1
-    duration: 10
+    duration: 120
     time: 22
     current: 0
   - id: "Waves n\xB06"
     light_on: 0
-    duration: 20
-    time: 32
+    duration: 8
+    time: 142
     current: 0
 --- !u!4 &959197628
 Transform:
@@ -2837,6 +2887,7 @@ RectTransform:
   m_Children:
   - {fileID: 383201617}
   - {fileID: 1014303275}
+  - {fileID: 1887569767}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7749,12 +7800,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631206487}
   m_LocalRotation: {x: -0.691629, y: 0.14713728, z: -0.14713728, w: 0.691629}
-  m_LocalPosition: {x: 0.07, y: 6.24, z: -6.01}
+  m_LocalPosition: {x: 0.07, y: 5.74, z: 3.9899998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1819750993}
   - {fileID: 2109388861}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 881993622}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -114.02, y: -90, z: 89.99999}
 --- !u!1 &1652708316
@@ -12906,6 +12957,89 @@ Transform:
   m_Father: {fileID: 959197628}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1887569766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887569767}
+  - component: {fileID: 1887569769}
+  - component: {fileID: 1887569768}
+  m_Layer: 5
+  m_Name: UI-Info-Wii
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1887569767
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887569766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1417639490}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1887569768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887569766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 2
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '=X
+
+    =Y
+
+    =Z'
+--- !u!222 &1887569769
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887569766}
+  m_CullTransparentMesh: 0
 --- !u!1 &1970135893
 GameObject:
   m_ObjectHideFlags: 0

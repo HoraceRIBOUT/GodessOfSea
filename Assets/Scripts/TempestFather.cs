@@ -6,7 +6,7 @@ public class TempestFather : MonoBehaviour
 {
     public static TempestFather instance;
 
-    public static bool DEBUG_MODE = false;
+    public bool DEBUG_MODE = false;
 
     public void Awake()
     {
@@ -126,7 +126,7 @@ public class TempestFather : MonoBehaviour
         }
 
 
-        if (TempestFather.DEBUG_MODE)
+        if (DEBUG_MODE)
         {
             Vector3 vec = InputManager.wiimoteInput;
             dbg_info_WiiInput.text = vec.x+"=X\n"+ vec.y + "=Y\n"+ vec.z + "=Z";
