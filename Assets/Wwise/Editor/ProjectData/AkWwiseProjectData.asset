@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: AkWwiseProjectData
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
-  - PhysicalPath: Virtual Acoustics/Default Work Unit.wwu
+  - PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 63055c9a76623d49be431fe2e5d90e12
     GuidInternal: 
-    m_lastTime: -8586321892264775808
+    m_lastTime: -8586321892256575808
     List: []
-  - PhysicalPath: Virtual Acoustics/Factory Reflect Acoustic Textures.wwu
+  - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586321892264775808
+    m_lastTime: -8586321892256275808
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -35,7 +35,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Acoustic_Banner
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Acoustic_Banner
+      Path: Factory Reflect Acoustic Textures\Textures\Acoustic_Banner
     - name: Anechoic
       guid: 32c20a8be202de4ebeacfdd1a900e3ed
       id: 1873957695
@@ -46,7 +46,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Anechoic
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Anechoic
+      Path: Factory Reflect Acoustic Textures\Textures\Anechoic
     - name: Brick
       guid: a9a586b004f2534ca838bdb18b18f6d6
       id: 504532776
@@ -57,7 +57,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Brick
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Brick
+      Path: Factory Reflect Acoustic Textures\Textures\Brick
     - name: Carpet
       guid: 8975223456dc604296c4b9f4b669092b
       id: 2412606308
@@ -68,7 +68,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Carpet
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Carpet
+      Path: Factory Reflect Acoustic Textures\Textures\Carpet
     - name: Concrete
       guid: 001cf85c9628e04aaf7c3080bdaba682
       id: 841620460
@@ -79,7 +79,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Concrete
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Concrete
+      Path: Factory Reflect Acoustic Textures\Textures\Concrete
     - name: Cork_Tiles
       guid: 19c9d2305f92434189063dbb3c4ae5e2
       id: 3195498748
@@ -90,7 +90,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Cork_Tiles
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Cork_Tiles
+      Path: Factory Reflect Acoustic Textures\Textures\Cork_Tiles
     - name: Curtains
       guid: 339ee6f8975c6849b508a1535f2d66e8
       id: 2928161104
@@ -101,7 +101,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Curtains
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Curtains
+      Path: Factory Reflect Acoustic Textures\Textures\Curtains
     - name: Drywall
       guid: f4e3a4680b4c8746a8b8a84db93dbc8f
       id: 3670307564
@@ -112,7 +112,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Drywall
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Drywall
+      Path: Factory Reflect Acoustic Textures\Textures\Drywall
     - name: Fabric
       guid: 32d581836edbed4ea7a3bc7b0a0b8ba8
       id: 1970351858
@@ -123,7 +123,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Fabric
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Fabric
+      Path: Factory Reflect Acoustic Textures\Textures\Fabric
     - name: Mountain
       guid: 313793c51a00b44a98dd9b033a8c8eab
       id: 513139656
@@ -134,7 +134,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Mountain
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Mountain
+      Path: Factory Reflect Acoustic Textures\Textures\Mountain
     - name: Tile
       guid: c4da82a82a13b747ba9db9907ba29cc0
       id: 2637588553
@@ -145,7 +145,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Tile
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Tile
+      Path: Factory Reflect Acoustic Textures\Textures\Tile
     - name: Wood
       guid: 96bcff1fe76f9e48ba6c7c14a71391ae
       id: 2058049674
@@ -156,7 +156,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Wood
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Wood
+      Path: Factory Reflect Acoustic Textures\Textures\Wood
     - name: Wood_Bright
       guid: e5d1857ba2c1634e9a13cec54b641adc
       id: 4262522749
@@ -167,7 +167,7 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Wood_Bright
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Wood_Bright
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Bright
     - name: Wood_Deep
       guid: 8e474652dac50c4ea0dec98d1479529a
       id: 1755085759
@@ -178,20 +178,31 @@ MonoBehaviour:
         ObjectType: 4
       - ElementName: Wood_Deep
         ObjectType: 15
-      Path: Factory Reflect Acoustic Textures/Textures/Wood_Deep
+      Path: Factory Reflect Acoustic Textures\Textures\Wood_Deep
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 67db8b189c3db746a5ce0fe0cecaca3c
     GuidInternal: 
-    m_lastTime: -8586321814704775808
-    List: []
+    m_lastTime: -8586320255373275808
+    List:
+    - name: Rvrb
+      guid: 79729ed07ab1a84d85a316d3a03be71d
+      id: 2157448753
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+      - ElementName: Rvrb
+        ObjectType: 1
+      Path: Default Work Unit\Master Audio Bus\Rvrb
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9fa16e16c01b2b4b95b17760d484eebc
     GuidInternal: 
-    m_lastTime: -8586321827784775808
+    m_lastTime: -8586320256634075808
     List:
     - name: Main
       guid: ecff5f47a2b7d6499d6645a2eda787f7
@@ -201,7 +212,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Main
         ObjectType: 7
-      Path: Default Work Unit/Main
+      Path: Default Work Unit\Main
     - name: Menu
       guid: c97693250a24ab4f974551cf4b72c5d1
       id: 2607556080
@@ -210,14 +221,38 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Menu
         ObjectType: 7
-      Path: Default Work Unit/Menu
+      Path: Default Work Unit\Menu
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d7a7a2a703d27b4ebda8de717a28b67a
     GuidInternal: 
-    m_lastTime: -8586321827784775808
+    m_lastTime: -8586320269510575808
     List:
+    - name: Play_Boue
+      guid: 96da33f79d6eb249ae4ef5cd481d31d0
+      id: 1726627313
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Boue
+        ObjectType: 3
+      Path: Default Work Unit\Play_Boue
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_EndScreen
+      guid: aa4d05e87b708d44a23f38afa075fb08
+      id: 440118453
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_EndScreen
+        ObjectType: 3
+      Path: Default Work Unit\Play_EndScreen
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Innit
       guid: b8a2b6c8b6e9194d97efe185cc78e5c9
       id: 3457376640
@@ -226,7 +261,31 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Innit
         ObjectType: 3
-      Path: Default Work Unit/Play_Innit
+      Path: Default Work Unit\Play_Innit
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Light_on
+      guid: e3151b566327d049bbc085b9838e6011
+      id: 816711006
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Light_on
+        ObjectType: 3
+      Path: Default Work Unit\Play_Light_on
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Menu
+      guid: 7c4bb5060e9cfb4390fc6ef4f9c8af67
+      id: 1278378707
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Menu
+        ObjectType: 3
+      Path: Default Work Unit\Play_Menu
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -238,22 +297,76 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Play_Sea
         ObjectType: 3
-      Path: Default Work Unit/Play_Sea
+      Path: Default Work Unit\Play_Sea
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Play_Thunder
+      guid: e13774c1c690f045be3bdeb5a606b5d7
+      id: 3870462868
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_Thunder
+        ObjectType: 3
+      Path: Default Work Unit\Play_Thunder
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Restart
+      guid: 81ab0277de46bc43aeab3653fa6cea99
+      id: 1203400786
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Restart
+        ObjectType: 3
+      Path: Default Work Unit\Restart
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Boue_Loop
+      guid: 1762ad7c40f5c2489ffa15412af795db
+      id: 2891435548
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Boue_Loop
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Boue_Loop
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
   RtpcWwu:
-  - PhysicalPath: Game Parameters/Default Work Unit.wwu
+  - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 4767981791384c43a3dd702e60c15797
     GuidInternal: 
-    m_lastTime: -8586321892264775808
-    List: []
-  - PhysicalPath: Game Parameters/Factory Motion.wwu
+    m_lastTime: -8586320338631275808
+    List:
+    - name: GP_Boue
+      guid: 7f410cafcde1514ebe8b73ff4768d3ea
+      id: 403766500
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GP_Boue
+        ObjectType: 13
+      Path: Default Work Unit\GP_Boue
+    - name: GP_Intensite_mer
+      guid: 16ed6061f5a17a48b3edebd4835ba3bc
+      id: 2750960087
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GP_Intensite_mer
+        ObjectType: 13
+      Path: Default Work Unit\GP_Intensite_mer
+  - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586321892264775808
+    m_lastTime: -8586321892263475808
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -263,7 +376,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Playback_Rate
         ObjectType: 13
-      Path: Factory Motion/Playback_Rate
+      Path: Factory Motion\Playback_Rate
     - name: RPM
       guid: 05aa129177f5fd449f4e4424158129e6
       id: 796049864
@@ -272,12 +385,12 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: RPM
         ObjectType: 13
-      Path: Factory Motion/RPM
-  - PhysicalPath: Game Parameters/Factory SoundSeed Air Game Syncs.wwu
+      Path: Factory Motion\RPM
+  - PhysicalPath: Game Parameters\Factory SoundSeed Air Game Syncs.wwu
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586321892264775808
+    m_lastTime: -8586321892263175808
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -287,7 +400,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Fear
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Fear
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fear
     - name: SS_Air_Freefall
       guid: 37fe2d2f9e4f944d83d853cca39781ad
       id: 3002758120
@@ -296,7 +409,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Freefall
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Freefall
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Freefall
     - name: SS_Air_Fury
       guid: dc79aea23acaba4696529986c322a87b
       id: 1029930033
@@ -305,7 +418,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Fury
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Fury
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Fury
     - name: SS_Air_Month
       guid: 45b4e209a3c47f44b3ca818a1d925ef7
       id: 2648548617
@@ -314,7 +427,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Month
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Month
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Month
     - name: SS_Air_Presence
       guid: 1a81b7e32f7b0f49b44f5fe51b468041
       id: 3847924954
@@ -323,7 +436,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Presence
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Presence
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Presence
     - name: SS_Air_RPM
       guid: ab9048a3d5b92645a64d5290c43ef2dc
       id: 822163944
@@ -332,7 +445,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_RPM
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_RPM
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_RPM
     - name: SS_Air_Size
       guid: efeb291393a12e47a38c64668b494879
       id: 3074696722
@@ -341,7 +454,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Size
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Size
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Size
     - name: SS_Air_Storm
       guid: db8c3fe9d1063747acaf7cd44bbed783
       id: 3715662592
@@ -350,7 +463,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Storm
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Storm
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Storm
     - name: SS_Air_TimeOfDay
       guid: 2ca76f537e8c8b4cae03ef34fdadc314
       id: 3203397129
@@ -359,7 +472,7 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_TimeOfDay
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_TimeOfDay
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_TimeOfDay
     - name: SS_Air_Turbulence
       guid: 197ba8edaa73a0409f192073606db710
       id: 4160247818
@@ -368,21 +481,58 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: SS_Air_Turbulence
         ObjectType: 13
-      Path: Factory SoundSeed Air Game Syncs/SS_Air_Turbulence
+      Path: Factory SoundSeed Air Game Syncs\SS_Air_Turbulence
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 49c63c4fa51f5b44af35e49252ef4be2
     GuidInternal: 
-    m_lastTime: -8586321892264775808
+    m_lastTime: -8586321892262175808
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: e6acf31769ba0d468b2cca9817fb6a35
     GuidInternal: 
-    m_lastTime: -8586321876734775808
+    m_lastTime: -8586320272798475808
     List:
+    - name: Boue_State
+      guid: b3937850a81fd748ac013aaea5bea143
+      id: 3874532484
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Boue_State
+        ObjectType: 11
+      Path: Default Work Unit\Boue_State
+      values:
+      - name: S0
+        guid: fcebf6cf7b772d44b8095cd79c58e737
+        id: 1584861492
+        PathAndIcons:
+        - ElementName: S0
+          ObjectType: 10
+      - name: S1
+        guid: 2bdf96f6a3a91749a472e2cee08cc6fd
+        id: 1584861493
+        PathAndIcons:
+        - ElementName: S1
+          ObjectType: 10
+      - name: S2
+        guid: 24bf37a3e4fe4f43bcfad7988efb9886
+        id: 1584861494
+        PathAndIcons:
+        - ElementName: S2
+          ObjectType: 10
+      - name: S3
+        guid: bdda04170d51d444879bc3eeadd0be9c
+        id: 1584861495
+        PathAndIcons:
+        - ElementName: S3
+          ObjectType: 10
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
     - name: Music_State
       guid: e18fb2c9e3471b40a807cb8de3517ac3
       id: 3826569560
@@ -391,8 +541,20 @@ MonoBehaviour:
         ObjectType: 12
       - ElementName: Music_State
         ObjectType: 11
-      Path: Default Work Unit/Music_State
+      Path: Default Work Unit\Music_State
       values:
+      - name: EndScreen
+        guid: 6e4983c5543e21409b018488acfa323d
+        id: 1441380152
+        PathAndIcons:
+        - ElementName: EndScreen
+          ObjectType: 10
+      - name: Menu
+        guid: 237fc433d2c462408fbbbabb11db014c
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Menu
+          ObjectType: 10
       - name: State_01
         guid: 65488d6c7bdfdd478a63a0743d106319
         id: 3794091078
@@ -415,16 +577,13 @@ MonoBehaviour:
       ValueIcons: []
       valuesInternal: []
   TriggerWwu:
-  - PhysicalPath: Triggers/Default Work Unit.wwu
+  - PhysicalPath: Triggers\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: d4d3ea0e7e30fe4eb60d99a5a75b059d
     GuidInternal: 
-    m_lastTime: -8586321892264775808
+    m_lastTime: -8586321892257875808
     List: []
   ExpandedItems:
   - /GodessWwise
-  - /GodessWwise/Switches
-  - /GodessWwise/Switches/Default Work Unit
-  - /GodessWwise/Switches/Default Work Unit/Music_State
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
