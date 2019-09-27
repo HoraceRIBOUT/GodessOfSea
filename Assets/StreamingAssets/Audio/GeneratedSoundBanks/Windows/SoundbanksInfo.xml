@@ -27,11 +27,13 @@
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1726627313" Name="Play_Boue" ObjectPath="\Events\Default Work Unit\Play_Boue"/>
+				<Event Id="440118453" Name="Play_EndScreen" ObjectPath="\Events\Default Work Unit\Play_EndScreen" MaxAttenuation="0.000000"/>
 				<Event Id="3457376640" Name="Play_Innit" ObjectPath="\Events\Default Work Unit\Play_Innit"/>
+				<Event Id="816711006" Name="Play_Light_on" ObjectPath="\Events\Default Work Unit\Play_Light_on"/>
 				<Event Id="1278378707" Name="Play_Menu" ObjectPath="\Events\Default Work Unit\Play_Menu"/>
 				<Event Id="3157907375" Name="Play_Sea" ObjectPath="\Events\Default Work Unit\Play_Sea"/>
 				<Event Id="3870462868" Name="Play_Thunder" ObjectPath="\Events\Default Work Unit\Play_Thunder"/>
-				<Event Id="1203400786" Name="Restart" ObjectPath="\Events\Default Work Unit\Restart" MaxAttenuation="0.000000"/>
+				<Event Id="1203400786" Name="Restart" ObjectPath="\Events\Default Work Unit\Restart"/>
 				<Event Id="2891435548" Name="Stop_Boue_Loop" ObjectPath="\Events\Default Work Unit\Stop_Boue_Loop" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -59,6 +61,10 @@
 					<ShortName>GS_Musique_State_02_Lp.wav</ShortName>
 					<Path>SFX/GS_Musique_State_02_Lp_8956FC97.wem</Path>
 				</File>
+				<File Id="566562855" Language="SFX">
+					<ShortName>UI_Balise_Check_Destination_02.wav</ShortName>
+					<Path>SFX/UI_Balise_Check_Destination_02_56D34C19.wem</Path>
+				</File>
 				<File Id="634003924" Language="SFX">
 					<ShortName>GS_Sfx_Boue_State_03_Lp.wav</ShortName>
 					<Path>SFX/GS_Sfx_Boue_State_03_Lp_8956FC97.wem</Path>
@@ -82,6 +88,10 @@
 				<File Id="928524050" Language="SFX">
 					<ShortName>GS_Amb_Thunder_02_os.wav</ShortName>
 					<Path>SFX/GS_Amb_Thunder_02_os_56D34C19.wem</Path>
+				</File>
+				<File Id="1048403112" Language="SFX">
+					<ShortName>Music_Endscreen.wav</ShortName>
+					<Path>SFX/Music_Endscreen_8956FC97.wem</Path>
 				</File>
 				<File Id="1055152245" Language="SFX">
 					<ShortName>GS_Musique_Menu_Lp.wav</ShortName>

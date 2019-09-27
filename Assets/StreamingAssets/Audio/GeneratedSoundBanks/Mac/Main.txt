@@ -1,4 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
+	440118453	Play_EndScreen			\Default Work Unit\Play_EndScreen	
+	816711006	Play_Light_on			\Default Work Unit\Play_Light_on	
 	1203400786	Restart			\Default Work Unit\Restart	
 	1278378707	Play_Menu			\Default Work Unit\Play_Menu	
 	1726627313	Play_Boue			\Default Work Unit\Play_Boue	
@@ -18,11 +20,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	278773008	GS_Musique_State_01_Lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Musique_State_01_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_State_01\GS_Musique_State_01_Lp\GS_Musique_State_01_Lp		12288144
 	368544383	GS_Sfx_Boue_State_01_Lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Sfx_Boue_State_01_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Boue_State\S0\GS_Sfx_Boue_State_01_Lp\GS_Sfx_Boue_State_01_Lp		256144
 	375114438	GS_Musique_State_02_Lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Musique_State_02_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_State_02\GS_Musique_State_02_Lp\GS_Musique_State_02_Lp		12288144
+	566562855	UI_Balise_Check_Destination_02	Y:\Desktop\GodessWwise\.cache\Mac\SFX\UI_Balise_Check_Destination_02_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_Balise_Check_Destination_02		348144
 	634003924	GS_Sfx_Boue_State_03_Lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Sfx_Boue_State_03_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Boue_State\S0_02\GS_Sfx_Boue_State_03_Lp\GS_Sfx_Boue_State_03_Lp		192144
 	645210855	GS_Amb_Thunder_01_os	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Amb_Thunder_01_os_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Thunder_rnd\GS_Amb_Thunder_01_os		576144
 	659671953	GS_Musique_State_02_Basse_Lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Musique_Main_State_02_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_State_02\GS_Musique_State_02_Lp\GS_Musique_State_02_Basse_Lp		12288144
 	815502762	GS_Sfx_Boue_State_02_Lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Sfx_Boue_State_02_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Boue_State\S0_01\GS_Sfx_Boue_State_02_Lp\GS_Sfx_Boue_State_02_Lp		256144
 	833265569	GS_Amb_Sea_lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Amb_Sea_lp_8956FC97.wem		\Actor-Mixer Hierarchy\Default Work Unit\GS_Amb_Sea_lp		2424944
 	928524050	GS_Amb_Thunder_02_os	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Amb_Thunder_02_os_56D34C19.wem		\Actor-Mixer Hierarchy\Default Work Unit\Thunder_rnd\GS_Amb_Thunder_02_os		896144
+	1048403112	Music_Endscreen	Y:\Desktop\GodessWwise\.cache\Mac\SFX\Music_Endscreen_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_Endscreen\Music_Endscreen		1141476
 	1055152245	GS_Musique_Menu_Lp	Y:\Desktop\GodessWwise\.cache\Mac\SFX\GS_Musique_Menu_Lp_8956FC97.wem		\Interactive Music Hierarchy\Default Work Unit\Music_State_sw\Music_Menu\GS_Musique_Menu_Lp\GS_Musique_Menu_Lp		10240144
 

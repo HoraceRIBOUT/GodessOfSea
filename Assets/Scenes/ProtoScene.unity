@@ -1328,23 +1328,28 @@ MonoBehaviour:
   startEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 8a88f96b0bae04d1db4d4d9b8d5a8a59,
+      type: 2}
   musicEvent:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: d0f466331e02f411d91148c373af2423,
+      type: 2}
   snd_light_on:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 3598087e2fac34156a1c2840061c0df9,
+      type: 2}
   snd_light_off:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: cd011a94fb19d42dcbd0ba8317702d99,
+      type: 2}
   snd_eclair:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 70e9836ff515e49e5906a17ea9c3266c,
+      type: 2}
   snd_menu:
     idInternal: 0
     valueGuidInternal: 
@@ -1352,23 +1357,28 @@ MonoBehaviour:
   snd_screenFin:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 1e77baff2304e4ae8857a6b41da6aaca,
+      type: 2}
   snd_restart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 3f5b40410e2f34a9e80969d1ca86eecd,
+      type: 2}
   snd_shakeBeat:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 7b6e2f401c9b549529625b03fc5dec0c,
+      type: 2}
   snd_intensiteRTPC:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 69957e94254464521941364826ea34e8,
+      type: 2}
   snd_palierRTPC:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 909b83dd1e0b34712ac93259f35fcde7,
+      type: 2}
   seuilForWiimoteDetection: 1.2
   wiimoteInputCurve:
     serializedVersion: 2

@@ -14,7 +14,9 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_BOUE = 1726627313U;
+        static const AkUniqueID PLAY_ENDSCREEN = 440118453U;
         static const AkUniqueID PLAY_INNIT = 3457376640U;
+        static const AkUniqueID PLAY_LIGHT_ON = 816711006U;
         static const AkUniqueID PLAY_MENU = 1278378707U;
         static const AkUniqueID PLAY_SEA = 3157907375U;
         static const AkUniqueID PLAY_THUNDER = 3870462868U;
@@ -43,6 +45,7 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID ENDSCREEN = 1441380152U;
                 static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID STATE_01 = 3794091078U;
                 static const AkUniqueID STATE_02 = 3794091077U;

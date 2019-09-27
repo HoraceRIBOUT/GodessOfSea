@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209a057a48cdd4f47b13d7f793b5ea35, type: 3}
+  m_Name: AF0C417F-E1CD-4E51-BE8B-73FF4768D3EA
+  m_EditorClassIdentifier: 
+  objectName: GP_Boue
+  id: 403766500
+  guid: AF0C417F-E1CD-4E51-BE8B-73FF4768D3EA
