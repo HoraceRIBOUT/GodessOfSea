@@ -110,7 +110,7 @@ public class TempestFather : MonoBehaviour
                 //END WII
             }
             else if (real_intensite > 0)
-                real_intensite -= reduceIntensitePerSecond * Time.deltaTime;
+                real_intensite -= 0.33f * Time.deltaTime;
             else
                 real_intensite = 0;
 
@@ -219,7 +219,7 @@ public class TempestFather : MonoBehaviour
     {
         if (canShake)
         {
-            pluviometre += changePluviometrePerSecond.Evaluate(intensite) * Time.deltaTime * (DEBUG_MODE ? 4 : 1);
+            pluviometre += changePluviometrePerSecond.Evaluate(intensite) * Time.deltaTime * (DEBUG_MODE ? 4 : 1) * 1.7f;
         }
         else
         {
@@ -277,6 +277,7 @@ public class TempestFather : MonoBehaviour
 
     public GameObject gameOverUI;
     public UnityEngine.UI.Text textDecompte;
+    public UnityEngine.UI.Text textScore;
 
     public void DisplayGameOver()
     {
@@ -287,7 +288,7 @@ public class TempestFather : MonoBehaviour
 
         gameOver = true;
 
-
+        textScore.text = "Score : " + pluviometre;
         textDecompte.enabled = true;
 
         AkSoundEngine.PostEvent(snd_screenFin.Id, this.gameObject);
