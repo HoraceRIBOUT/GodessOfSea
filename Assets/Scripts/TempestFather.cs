@@ -80,7 +80,7 @@ public class TempestFather : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow))
                 if (canShake)
                     AddIntensite(0.12f);
-                else
+            else if(!ignoringMovement)
                     badIntensite += 0.12f;
             
             //WII
@@ -88,9 +88,8 @@ public class TempestFather : MonoBehaviour
             if ((magnit > seuilForWiimoteDetection) && canShake)
                 if (canShake)
                     AddIntensite(wiimoteInputCurve.Evaluate(magnit) * Time.deltaTime);
-                else
+                else if (!ignoringMovement)
                     badIntensite += wiimoteInputCurve.Evaluate(magnit) * Time.deltaTime;
-
             //END WII
 
             CalculPluviometre();
@@ -118,6 +117,11 @@ public class TempestFather : MonoBehaviour
                 Restart();
         }
 
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
 
     }
 
@@ -147,7 +151,7 @@ public class TempestFather : MonoBehaviour
         }
         else
         {
-            if(badIntensite != 0)
+            if(badIntensite != 0 && !ignoringMovement)
             {
                 Debug.Log("pluviometre go down : " + pluviometre);
                 pluviometre += badIntensite * reducePluviometreWhenLightOff * Time.deltaTime;
