@@ -1244,9 +1244,9 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
+      inSlope: 1
       outSlope: 1
-      tangentMode: 0
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -1254,8 +1254,8 @@ MonoBehaviour:
       time: 1
       value: 1
       inSlope: 1
-      outSlope: 0
-      tangentMode: 0
+      outSlope: 1
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -2398,218 +2398,168 @@ MonoBehaviour:
   wavesPattern:
   - id: "Waves n\xB00"
     light_on: 0
-    duration: 3
+    duration: 4
     time: 0
     current: 0
   - id: "Waves n\xB01"
     light_on: 1
-    duration: 4
-    time: 3
+    duration: 6
+    time: 4
     current: 0
   - id: "Waves n\xB02"
     light_on: 0
-    duration: 3
-    time: 7
+    duration: 4
+    time: 10
     current: 0
   - id: "Waves n\xB03"
     light_on: 1
     duration: 4
-    time: 10
+    time: 14
     current: 0
   - id: "Waves n\xB04"
     light_on: 0
-    duration: 5
-    time: 14
+    duration: 4
+    time: 18
     current: 0
   - id: "Waves n\xB05"
     light_on: 1
     duration: 4
-    time: 19
+    time: 22
     current: 0
   - id: "Waves n\xB06"
     light_on: 0
-    duration: 3
-    time: 23
-    current: 0
-  - id: "Waves n\xB07"
-    light_on: 1
     duration: 4
     time: 26
     current: 0
+  - id: "Waves n\xB07"
+    light_on: 1
+    duration: 7
+    time: 30
+    current: 0
   - id: "Waves n\xB08"
     light_on: 0
-    duration: 5
-    time: 30
+    duration: 6
+    time: 37
     current: 0
   - id: "Waves n\xB09"
     light_on: 1
     duration: 4
-    time: 35
+    time: 43
     current: 0
   - id: "Waves n\xB010"
     light_on: 0
-    duration: 3
-    time: 39
+    duration: 4
+    time: 47
     current: 0
   - id: "Waves n\xB011"
     light_on: 1
     duration: 4
-    time: 42
+    time: 51
     current: 0
   - id: "Waves n\xB012"
     light_on: 0
-    duration: 5
-    time: 46
+    duration: 6
+    time: 55
     current: 0
   - id: "Waves n\xB013"
     light_on: 1
     duration: 4
-    time: 51
+    time: 61
     current: 0
   - id: "Waves n\xB014"
     light_on: 0
-    duration: 2
-    time: 55
+    duration: 3
+    time: 65
     current: 0
   - id: "Waves n\xB015"
     light_on: 1
-    duration: 4
-    time: 57
+    duration: 5
+    time: 68
     current: 0
   - id: "Waves n\xB016"
     light_on: 0
-    duration: 5
-    time: 61
+    duration: 3
+    time: 73
     current: 0
   - id: "Waves n\xB017"
     light_on: 1
-    duration: 4
-    time: 66
+    duration: 6
+    time: 76
     current: 0
   - id: "Waves n\xB018"
     light_on: 0
-    duration: 2
-    time: 70
+    duration: 5
+    time: 82
     current: 0
   - id: "Waves n\xB019"
     light_on: 1
     duration: 4
-    time: 72
+    time: 87
     current: 0
   - id: "Waves n\xB020"
     light_on: 0
     duration: 5
-    time: 76
+    time: 91
     current: 0
   - id: "Waves n\xB021"
     light_on: 1
     duration: 4
-    time: 81
+    time: 96
     current: 0
   - id: "Waves n\xB022"
     light_on: 0
-    duration: 3
-    time: 85
+    duration: 4
+    time: 100
     current: 0
   - id: "Waves n\xB023"
     light_on: 1
-    duration: 1.5
-    time: 88
+    duration: 7
+    time: 104
     current: 0
   - id: "Waves n\xB024"
     light_on: 0
-    duration: 3
-    time: 89.5
+    duration: 7
+    time: 111
     current: 0
   - id: "Waves n\xB025"
     light_on: 1
     duration: 4
-    time: 92.5
+    time: 118
     current: 0
   - id: "Waves n\xB026"
     light_on: 0
     duration: 3
-    time: 96.5
+    time: 122
     current: 0
   - id: "Waves n\xB027"
     light_on: 1
     duration: 4
-    time: 99.5
+    time: 125
     current: 0
   - id: "Waves n\xB028"
     light_on: 0
     duration: 3
-    time: 103.5
+    time: 129
     current: 0
   - id: "Waves n\xB029"
     light_on: 1
-    duration: 1
-    time: 106.5
+    duration: 4
+    time: 132
     current: 0
   - id: "Waves n\xB030"
     light_on: 0
-    duration: 3
-    time: 107.5
+    duration: 5
+    time: 136
     current: 0
   - id: "Waves n\xB031"
     light_on: 1
-    duration: 1
-    time: 110.5
+    duration: 8
+    time: 141
     current: 0
   - id: "Waves n\xB032"
     light_on: 0
     duration: 3
-    time: 111.5
-    current: 0
-  - id: "Waves n\xB033"
-    light_on: 1
-    duration: 1
-    time: 114.5
-    current: 0
-  - id: "Waves n\xB034"
-    light_on: 0
-    duration: 5
-    time: 115.5
-    current: 0
-  - id: "Waves n\xB035"
-    light_on: 1
-    duration: 6
-    time: 120.5
-    current: 0
-  - id: "Waves n\xB036"
-    light_on: 0
-    duration: 6
-    time: 126.5
-    current: 0
-  - id: "Waves n\xB037"
-    light_on: 1
-    duration: 4
-    time: 132.5
-    current: 0
-  - id: "Waves n\xB038"
-    light_on: 0
-    duration: 2.5
-    time: 136.5
-    current: 0
-  - id: "Waves n\xB039"
-    light_on: 1
-    duration: 4
-    time: 139
-    current: 0
-  - id: "Waves n\xB040"
-    light_on: 0
-    duration: 2.5
-    time: 143
-    current: 0
-  - id: "Waves n\xB041"
-    light_on: 1
-    duration: 7
-    time: 145.5
-    current: 0
-  - id: "Waves n\xB042"
-    light_on: 0
-    duration: 2
-    time: 152.5
+    time: 149
     current: 0
 --- !u!4 &959197628
 Transform:
