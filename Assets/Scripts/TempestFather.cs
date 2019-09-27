@@ -68,6 +68,7 @@ public class TempestFather : MonoBehaviour
     public Gradient intensiteGradient;
 
     public Transform rotationAiguille;
+    public List<SpriteRenderer> spriteCompteurPression;
     
     public UnityEngine.UI.Slider sliderPluviometre;
     public UnityEngine.UI.Image sliderPlBG;
@@ -263,7 +264,11 @@ public class TempestFather : MonoBehaviour
         else
             AkSoundEngine.PostEvent(snd_light_off.Id, this.gameObject);
 
-        sliderIntensite.gameObject.SetActive(on);
+        //sliderIntensite.gameObject.SetActive(on);
+        foreach(SpriteRenderer sR in spriteCompteurPression)
+        {
+            sR.color = new Color(1, 1, 1, on ? 1 : 0.2f);
+        }
         real_intensite = 0f;
         Calculntensite();
 
