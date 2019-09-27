@@ -9,6 +9,9 @@ public class WavesManager : MonoBehaviour
 
     public List<GameObject> randomWaves;
 
+
+    public Animator baliseAnimator;
+
     [System.Serializable]
     public class Waves
     {
@@ -31,16 +34,27 @@ public class WavesManager : MonoBehaviour
             float index = i++;
             float value = (((index) / waveeees.Count) * 0.3f);
             animWav.speed = 1f - value;
+            if (animWav.name.Contains("4"))
+            {
+                baliseAnimator.speed = animWav.speed;
+            }
         }
     }
 
     public void Update()
     {
-        foreach(Animator animWav in waveeees)
+        float pluie = (TempestFather.instance.pluviometre / 100f);
+
+        foreach (Animator animWav in waveeees)
         {
-            animWav.SetLayerWeight(0, 1 - (TempestFather.instance.pluviometre/100f));
-            animWav.SetLayerWeight(1, (TempestFather.instance.pluviometre/100f));
+            animWav.SetLayerWeight(0, 1 - pluie);
+            animWav.SetLayerWeight(1, pluie);
         }
+
+        float intensite = 0.5f + ( 0.5f * TempestFather.instance.intensite);
+
+        baliseAnimator.SetLayerWeight(0, 1 - (pluie * intensite));
+        baliseAnimator.SetLayerWeight(1, pluie * intensite); 
     }
 
     private IEnumerator WavesByWavesOnWavesList()
