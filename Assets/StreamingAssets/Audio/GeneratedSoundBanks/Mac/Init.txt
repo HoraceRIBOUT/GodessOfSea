@@ -1,3 +1,12 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3874532484	Boue_State			\Default Work Unit\Boue_State	
+
+Switch	ID	Name	Switch Group			Notes
+	1584861492	S0	Boue_State			
+	1584861493	S1	Boue_State			
+	1584861494	S2	Boue_State			
+	1584861495	S3	Boue_State			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	504532776	Brick			\Factory Reflect Acoustic Textures\Textures\Brick	
 	513139656	Mountain			\Factory Reflect Acoustic Textures\Textures\Mountain	

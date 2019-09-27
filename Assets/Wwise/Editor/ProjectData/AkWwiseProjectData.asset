@@ -184,7 +184,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 67db8b189c3db746a5ce0fe0cecaca3c
     GuidInternal: 
-    m_lastTime: -8586321892274775808
+    m_lastTime: -8586321814704775808
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
