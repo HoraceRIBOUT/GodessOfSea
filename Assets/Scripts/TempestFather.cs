@@ -85,7 +85,7 @@ public class TempestFather : MonoBehaviour
 
             Calculntensite();
 
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKey(KeyCode.UpArrow))
                 if (canShake)
                     AddIntensite(0.12f);
             else if(!ignoringMovement)
@@ -130,7 +130,7 @@ public class TempestFather : MonoBehaviour
         {
             Vector3 vec = InputManager.wiimoteInput;
             dbg_info_WiiInput.text = vec.x+"=X\n"+ vec.y + "=Y\n"+ vec.z + "=Z";
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKey(KeyCode.F))
                 print("WiiInput = " + vec + " at " + Time.time);
         }
 
@@ -164,16 +164,16 @@ public class TempestFather : MonoBehaviour
     {
         if (canShake)
         {
-            pluviometre += changePluviometrePerSecond.Evaluate(intensite) * Time.deltaTime;
+            pluviometre += changePluviometrePerSecond.Evaluate(intensite) * Time.deltaTime * (DEBUG_MODE ? 4 : 1);
         }
         else
         {
             if(badIntensite != 0 && !ignoringMovement)
             {
-                Debug.Log("pluviometre go down : " + pluviometre);
+                //Debug.Log("pluviometre go down : " + pluviometre);
                 pluviometre += badIntensite * reducePluviometreWhenLightOff * Time.deltaTime;
                 badIntensite = 0;
-                Debug.Log("pluviometre is down : " + pluviometre);
+                //Debug.Log("pluviometre is down : " + pluviometre);
             }
         }
         pluviometre = Mathf.Max(0, pluviometre);

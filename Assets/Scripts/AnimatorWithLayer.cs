@@ -6,6 +6,9 @@ public class AnimatorWithLayer : MonoBehaviour
 {
     public Animator animatorTargeted;
 
+    public float timeToTransitionne = 1f;
+    private int palier;
+
     public enum ValueLook
     {
         intensite,
@@ -28,14 +31,37 @@ public class AnimatorWithLayer : MonoBehaviour
                 animatorTargeted.SetLayerWeight(1, TempestFather.instance.intensite/100f);
                 break;
             case ValueLook.palier:
-                for (int i = 0; i < animatorTargeted.layerCount; i++)
+                if(palier != TempestFather.instance.currentPalier)
                 {
-                    animatorTargeted.SetLayerWeight(i, 0);
+                    palier = TempestFather.instance.currentPalier;
+                    StartCoroutine(transitionLayer());
                 }
-                animatorTargeted.SetLayerWeight(TempestFather.instance.currentPalier, 1);
                 break;
             default:
                 break;
         }
+    }
+
+
+    IEnumerator transitionLayer()
+    {
+        Debug.Log("End coroutine");
+        if (palier != 0)
+        {
+            float lerp = 0;
+            while (lerp < 1)
+            {
+                animatorTargeted.SetLayerWeight(palier-1, 1f-lerp);
+                animatorTargeted.SetLayerWeight(palier, lerp);
+
+                lerp += Time.deltaTime/timeToTransitionne;
+
+                yield return new WaitForSeconds(1f / 60f);
+            }
+        }
+        Debug.Log("Start coroutine");
+        animatorTargeted.SetLayerWeight(palier - 1, 0);
+        animatorTargeted.SetLayerWeight(palier, 1);
+
     }
 }
