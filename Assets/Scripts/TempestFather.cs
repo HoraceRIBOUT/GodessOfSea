@@ -66,10 +66,14 @@ public class TempestFather : MonoBehaviour
     public UnityEngine.UI.Slider sliderIntensite;
     public UnityEngine.UI.Image sliderBG;
     public Gradient intensiteGradient;
+
+    public Transform rotationAiguille;
     
     public UnityEngine.UI.Slider sliderPluviometre;
     public UnityEngine.UI.Image sliderPlBG;
     public Gradient pluviometreGradient;
+
+    public Transform scaleTube;
 
     [Header("Sound")]
     public AK.Wwise.Event startEvent;
@@ -211,6 +215,7 @@ public class TempestFather : MonoBehaviour
         sliderIntensite.value = intensite;
         sliderBG.color = intensiteGradient.Evaluate(intensite);
 
+        rotationAiguille.rotation = Quaternion.Euler(Vector3.forward * -180 * intensite);
 
         AkSoundEngine.SetRTPCValue(snd_intensiteRTPC.Id, (int)(intensite * 4));
     }
@@ -234,8 +239,10 @@ public class TempestFather : MonoBehaviour
         pluviometre = Mathf.Max(0, pluviometre);
         pluviometre = Mathf.Min(100, pluviometre);
 
-        sliderPluviometre.value = pluviometre / 100;
-        sliderPlBG.color = pluviometreGradient.Evaluate(pluviometre / 100);
+        sliderPluviometre.value = pluviometre / 100f;
+        sliderPlBG.color = pluviometreGradient.Evaluate(pluviometre / 100f);
+
+        scaleTube.localScale = new Vector3(1, 1.05f * (float)pluviometre / 100f, 1);
 
         //seuil !
         if (currentPalier != 3 && pluviometre > seuilForEachPalier[currentPalier - 1])
