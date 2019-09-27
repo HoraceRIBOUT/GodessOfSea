@@ -2528,48 +2528,28 @@ MonoBehaviour:
     current: 0
   - id: "Waves n\xB024"
     light_on: 0
-    duration: 7
+    duration: 5
     time: 111
     current: 0
   - id: "Waves n\xB025"
     light_on: 1
-    duration: 4
-    time: 118
+    duration: 8
+    time: 116
     current: 0
   - id: "Waves n\xB026"
     light_on: 0
-    duration: 3
-    time: 122
+    duration: 4
+    time: 124
     current: 0
   - id: "Waves n\xB027"
     light_on: 1
-    duration: 4
-    time: 125
+    duration: 10
+    time: 128
     current: 0
   - id: "Waves n\xB028"
     light_on: 0
-    duration: 3
-    time: 129
-    current: 0
-  - id: "Waves n\xB029"
-    light_on: 1
-    duration: 4
-    time: 132
-    current: 0
-  - id: "Waves n\xB030"
-    light_on: 0
-    duration: 5
-    time: 136
-    current: 0
-  - id: "Waves n\xB031"
-    light_on: 1
-    duration: 8
-    time: 141
-    current: 0
-  - id: "Waves n\xB032"
-    light_on: 0
-    duration: 3
-    time: 149
+    duration: 2
+    time: 138
     current: 0
 --- !u!4 &959197628
 Transform:
