@@ -2500,83 +2500,73 @@ MonoBehaviour:
     current: 0
   - id: "Waves n\xB013"
     light_on: 1
-    duration: 4
+    duration: 5
     time: 61
     current: 0
   - id: "Waves n\xB014"
     light_on: 0
     duration: 3
-    time: 65
+    time: 66
     current: 0
   - id: "Waves n\xB015"
     light_on: 1
     duration: 5
-    time: 68
+    time: 69
     current: 0
   - id: "Waves n\xB016"
     light_on: 0
     duration: 3
-    time: 73
+    time: 74
     current: 0
   - id: "Waves n\xB017"
     light_on: 1
     duration: 6
-    time: 76
+    time: 77
     current: 0
   - id: "Waves n\xB018"
     light_on: 0
     duration: 5
-    time: 82
+    time: 83
     current: 0
   - id: "Waves n\xB019"
     light_on: 1
     duration: 4
-    time: 87
+    time: 88
     current: 0
   - id: "Waves n\xB020"
     light_on: 0
     duration: 5
-    time: 91
+    time: 92
     current: 0
   - id: "Waves n\xB021"
     light_on: 1
-    duration: 4
-    time: 96
+    duration: 5
+    time: 97
     current: 0
   - id: "Waves n\xB022"
     light_on: 0
-    duration: 4
-    time: 100
+    duration: 5
+    time: 102
     current: 0
   - id: "Waves n\xB023"
     light_on: 1
-    duration: 7
-    time: 104
+    duration: 8
+    time: 107
     current: 0
   - id: "Waves n\xB024"
     light_on: 0
     duration: 5
-    time: 111
+    time: 115
     current: 0
   - id: "Waves n\xB025"
     light_on: 1
-    duration: 8
-    time: 116
+    duration: 10
+    time: 120
     current: 0
   - id: "Waves n\xB026"
     light_on: 0
-    duration: 4
-    time: 124
-    current: 0
-  - id: "Waves n\xB027"
-    light_on: 1
-    duration: 10
-    time: 128
-    current: 0
-  - id: "Waves n\xB028"
-    light_on: 0
     duration: 2
-    time: 138
+    time: 130
     current: 0
 --- !u!4 &959197628
 Transform:
