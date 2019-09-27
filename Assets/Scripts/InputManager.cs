@@ -16,11 +16,6 @@ public class InputManager : MonoBehaviour
     void Update()
     {
       wiimoteInput = Wii.GetWiimoteAcceleration(whichRemote);
-        //Debug.Log(input);
-          //Wii.ToggleRumble(whichRemote);
-					//TODO : refine/polish
-          if (wiimoteInput.z > 3.0f || wiimoteInput.z < -3.0f){//Decided arbitrarily
-            Debug.Log("Input?");
-          }
+			Debug.Log(Wii.GetBattery(whichRemote)+"% Battery.");
     }
 }
