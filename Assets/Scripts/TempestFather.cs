@@ -95,14 +95,37 @@ public class TempestFather : MonoBehaviour
     public float seuilForWiimoteDetection = 1f;
     public AnimationCurve wiimoteInputCurve;
     public UnityEngine.UI.Text dbg_info_WiiInput;
-
-
-
-
-
-
+    
     public void Update()
     {
+        if (menu)
+        {
+            float magnit = InputManager.wiimoteInput.magnitude;
+            if (Input.GetKey(KeyCode.UpArrow) || magnit > seuilForWiimoteDetection)
+            {
+                if (Input.GetKey(KeyCode.UpArrow))
+                    AddIntensite(0.33f * Time.deltaTime);
+                //WII
+                if (magnit > seuilForWiimoteDetection)
+                    AddIntensite(0.33f * Time.deltaTime);
+                //END WII
+            }
+            else if (real_intensite > 0)
+                real_intensite -= reduceIntensitePerSecond * Time.deltaTime;
+            else
+                real_intensite = 0;
+
+            textDecompte.text = (real_intensite < (1f / 3f)) ? "3" : ((real_intensite < (2f / 3f)) ? "2" : ((real_intensite < (3f / 3f)) ? "1" : "0"));
+
+            if (real_intensite >= 1)
+            {
+                menu = false;
+                textDecompte.enabled = false;
+            }
+            return;
+        }
+
+
         if (!gameOver)
         {
             if (real_intensite > 0)
@@ -250,6 +273,8 @@ public class TempestFather : MonoBehaviour
     [Header("GameOver")]
     public bool gameOver = false;
 
+    public bool menu = true;
+
     public GameObject gameOverUI;
     public UnityEngine.UI.Text textDecompte;
 
@@ -261,6 +286,9 @@ public class TempestFather : MonoBehaviour
         //pas de calcul d'intensité
 
         gameOver = true;
+
+
+        textDecompte.enabled = true;
 
         AkSoundEngine.PostEvent(snd_screenFin.Id, this.gameObject);
     }

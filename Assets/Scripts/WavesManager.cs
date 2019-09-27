@@ -59,6 +59,11 @@ public class WavesManager : MonoBehaviour
 
     private IEnumerator WavesByWavesOnWavesList()
     {
+        while (TempestFather.instance.menu)
+            yield return new WaitForSeconds(0.1f);
+
+        Debug.Log("there we go !");
+
         foreach (Waves w in wavesPattern)
         {
             w.current = true;
