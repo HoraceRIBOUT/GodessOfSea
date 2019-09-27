@@ -871,6 +871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 451111018}
   - component: {fileID: 451111019}
+  - component: {fileID: 451111020}
   m_Layer: 0
   m_Name: Eclair
   m_TagString: Untagged
@@ -914,6 +915,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &451111020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451111017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233506e2e310e95418fc8193c5654dc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorTargeted: {fileID: 451111019}
+  timeToTransitionne: 1
+  valueToSeek: 2
 --- !u!1 &477951253
 GameObject:
   m_ObjectHideFlags: 0
