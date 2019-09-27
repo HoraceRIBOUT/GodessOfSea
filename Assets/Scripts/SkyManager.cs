@@ -29,6 +29,7 @@ public class SkyManager : MonoBehaviour
             if(pallier > 2)
             {
                 pluieStep[2].Play();
+                TempestFather.instance.SoundEclair();
             }
             if (pallier > 1)
             {

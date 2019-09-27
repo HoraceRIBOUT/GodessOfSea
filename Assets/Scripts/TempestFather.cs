@@ -20,9 +20,19 @@ public class TempestFather : MonoBehaviour
             TempestFather.instance = this;
             AkSoundEngine.PostEvent(startEvent.Id, gameObject);
             AkSoundEngine.PostEvent(musicEvent.Id, gameObject);
+
+            startEvent.Post(this.gameObject, (uint)AkCallbackType.AK_MusicSyncBeat, CallBackFunction);
         }
         else
             Destroy(this.gameObject);
+    }
+
+
+    void CallBackFunction(object baseObject, AkCallbackType type, object info)
+    {
+        if (canShake)
+            if (intensite != 0)
+                AkSoundEngine.PostEvent(snd_shakeBeat.Id, this.gameObject);
     }
 
 
@@ -65,12 +75,31 @@ public class TempestFather : MonoBehaviour
     [Header("Sound")]
     public AK.Wwise.Event startEvent;
     public AK.Wwise.Event musicEvent;
-    public AK.Wwise.Switch switchForSeuil;
+
+    public AK.Wwise.Event snd_light_on;
+    public AK.Wwise.Event snd_light_off;
+    public AK.Wwise.Event snd_eclair;
+
+    public AK.Wwise.Event snd_menu;
+    public AK.Wwise.Event snd_screenFin;
+    public AK.Wwise.Event snd_restart;
+
+    public AK.Wwise.Event snd_shakeBeat;
+
+    public AK.Wwise.RTPC snd_intensiteRTPC;
+
+    public AK.Wwise.RTPC snd_palierRTPC;
+    
 
     [Header("Wiimote gestion")]
     public float seuilForWiimoteDetection = 1f;
     public AnimationCurve wiimoteInputCurve;
     public UnityEngine.UI.Text dbg_info_WiiInput;
+
+
+
+
+
 
     public void Update()
     {
@@ -158,6 +187,9 @@ public class TempestFather : MonoBehaviour
 
         sliderIntensite.value = intensite;
         sliderBG.color = intensiteGradient.Evaluate(intensite);
+
+
+        AkSoundEngine.SetRTPCValue(snd_intensiteRTPC.Id, (int)(intensite * 4));
     }
     
     void CalculPluviometre()
@@ -186,7 +218,8 @@ public class TempestFather : MonoBehaviour
         if (currentPalier != 3 && pluviometre > seuilForEachPalier[currentPalier - 1])
         {
             currentPalier++;
-            //Do everything about it
+
+            AkSoundEngine.SetRTPCValue(snd_palierRTPC.Id, currentPalier);
         }
     }
 
@@ -195,6 +228,10 @@ public class TempestFather : MonoBehaviour
         canShake = on;
         theLight.gameObject.SetActive(on);
 
+        if (on)
+            AkSoundEngine.PostEvent(snd_light_on.Id, this.gameObject);
+        else
+            AkSoundEngine.PostEvent(snd_light_off.Id, this.gameObject);
 
         sliderIntensite.gameObject.SetActive(on);
         real_intensite = 0f;
@@ -224,6 +261,8 @@ public class TempestFather : MonoBehaviour
         //pas de calcul d'intensité
 
         gameOver = true;
+
+        AkSoundEngine.PostEvent(snd_screenFin.Id, this.gameObject);
     }
 
     public void Restart()
@@ -231,9 +270,18 @@ public class TempestFather : MonoBehaviour
         //do a smooth restart ! 
         //not on my watch !
         //YOLOOOOOO
+        AkSoundEngine.PostEvent(snd_restart.Id, this.gameObject);
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex);
     }
 
 
 #endregion
+
+
+
+
+    public void SoundEclair()
+    {
+        AkSoundEngine.PostEvent(snd_eclair.Id, this.gameObject);
+    }
 }
