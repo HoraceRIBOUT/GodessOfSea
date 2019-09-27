@@ -6,8 +6,15 @@ public class TempestFather : MonoBehaviour
 {
     public static TempestFather instance;
 
+    public static bool DEBUG_MODE = false;
+
     public void Awake()
     {
+#if !UNITY_EDITOR
+        DEBUG_MODE = false;
+#endif
+
+
         if (TempestFather.instance == null)
         {
             TempestFather.instance = this;
@@ -63,6 +70,7 @@ public class TempestFather : MonoBehaviour
     [Header("Wiimote gestion")]
     public float seuilForWiimoteDetection = 1f;
     public AnimationCurve wiimoteInputCurve;
+    public UnityEngine.UI.Text dbg_info_WiiInput;
 
     public void Update()
     {
@@ -115,6 +123,15 @@ public class TempestFather : MonoBehaviour
 
             if (real_intensite >= 1)
                 Restart();
+        }
+
+
+        if (TempestFather.DEBUG_MODE)
+        {
+            Vector3 vec = InputManager.wiimoteInput;
+            dbg_info_WiiInput.text = vec.x+"=X\n"+ vec.y + "=Y\n"+ vec.z + "=Z";
+            if (Input.GetKeyDown(KeyCode.F))
+                print("WiiInput = " + vec + " at " + Time.time);
         }
 
 
@@ -192,7 +209,7 @@ public class TempestFather : MonoBehaviour
         ignoringMovement = false;
     }
 
-    #region GAMEOVER PART
+#region GAMEOVER PART
     [Header("GameOver")]
     public bool gameOver = false;
 
@@ -218,5 +235,5 @@ public class TempestFather : MonoBehaviour
     }
 
 
-    #endregion
+#endregion
 }
