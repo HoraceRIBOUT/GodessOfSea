@@ -13,13 +13,12 @@ public class TempestFather : MonoBehaviour
 #if !UNITY_EDITOR
         DEBUG_MODE = false;
 #endif
-
+        dbg_info_WiiInput.enabled = DEBUG_MODE;
 
         if (TempestFather.instance == null)
         {
             TempestFather.instance = this;
             AkSoundEngine.PostEvent(startEvent.Id, gameObject);
-            AkSoundEngine.PostEvent(musicEvent.Id, gameObject);
 
             startEvent.Post(this.gameObject, (uint)AkCallbackType.AK_MusicSyncBeat, CallBackFunction);
         }
@@ -121,6 +120,7 @@ public class TempestFather : MonoBehaviour
             {
                 menu = false;
                 textDecompte.enabled = false;
+                AkSoundEngine.PostEvent(musicEvent.Id, gameObject);
             }
             return;
         }
