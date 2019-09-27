@@ -59,6 +59,7 @@ namespace AK
     {
         static const AkUniqueID GP_BOUE = 403766500U;
         static const AkUniqueID GP_INTENSITE_MER = 2750960087U;
+        static const AkUniqueID GP_MUSIQUE = 4023405752U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID RPM = 796049864U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;

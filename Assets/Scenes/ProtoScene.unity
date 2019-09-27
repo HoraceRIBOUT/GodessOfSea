@@ -1456,7 +1456,7 @@ MonoBehaviour:
   snd_palierRTPC:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 909b83dd1e0b34712ac93259f35fcde7,
+    WwiseObjectReference: {fileID: 11400000, guid: e7baa0bb2aeeecb4ea248073ab24e24b,
       type: 2}
   seuilForWiimoteDetection: 1.2
   wiimoteInputCurve:

@@ -21,6 +21,7 @@ public class TempestFather : MonoBehaviour
             AkSoundEngine.PostEvent(startEvent.Id, gameObject);
 
             startEvent.Post(this.gameObject, (uint)AkCallbackType.AK_MusicSyncBeat, CallBackFunction);
+            AkSoundEngine.SetRTPCValue(snd_palierRTPC.Id, 0);
         }
         else
             Destroy(this.gameObject);
@@ -126,6 +127,7 @@ public class TempestFather : MonoBehaviour
                 menu = false;
                 textDecompte.enabled = false;
                 AkSoundEngine.PostEvent(musicEvent.Id, gameObject);
+                AkSoundEngine.SetRTPCValue(snd_palierRTPC.Id, 1);
             }
             return;
         }
@@ -252,6 +254,10 @@ public class TempestFather : MonoBehaviour
 
             AkSoundEngine.SetRTPCValue(snd_palierRTPC.Id, currentPalier);
         }
+        if(currentPalier == 3)
+        {
+            AkSoundEngine.SetRTPCValue(snd_palierRTPC.Id, currentPalier);
+        }
     }
 
     public void LightChange(bool on)
@@ -303,6 +309,7 @@ public class TempestFather : MonoBehaviour
         textScore.text = "Score : " + pluviometre;
         textDecompte.enabled = true;
 
+        AkSoundEngine.SetRTPCValue(snd_palierRTPC.Id, 4);
         AkSoundEngine.PostEvent(snd_screenFin.Id, this.gameObject);
     }
 

@@ -227,7 +227,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: d7a7a2a703d27b4ebda8de717a28b67a
     GuidInternal: 
-    m_lastTime: -8586320269510575808
+    m_lastTime: -8586320189806789638
     List:
     - name: Play_Boue
       guid: 96da33f79d6eb249ae4ef5cd481d31d0
@@ -342,7 +342,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 4767981791384c43a3dd702e60c15797
     GuidInternal: 
-    m_lastTime: -8586320338631275808
+    m_lastTime: -8586320200932204864
     List:
     - name: GP_Boue
       guid: 7f410cafcde1514ebe8b73ff4768d3ea
@@ -362,6 +362,15 @@ MonoBehaviour:
       - ElementName: GP_Intensite_mer
         ObjectType: 13
       Path: Default Work Unit\GP_Intensite_mer
+    - name: GP_Musique
+      guid: fb5342c417c9b349ba2b4611377a77a2
+      id: 4023405752
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GP_Musique
+        ObjectType: 13
+      Path: Default Work Unit\GP_Musique
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
@@ -494,7 +503,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: e6acf31769ba0d468b2cca9817fb6a35
     GuidInternal: 
-    m_lastTime: -8586320272798475808
+    m_lastTime: -8586320200931808244
     List:
     - name: Boue_State
       guid: b3937850a81fd748ac013aaea5bea143
