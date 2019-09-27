@@ -13,18 +13,37 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BOUE = 1726627313U;
         static const AkUniqueID PLAY_INNIT = 3457376640U;
+        static const AkUniqueID PLAY_MENU = 1278378707U;
         static const AkUniqueID PLAY_SEA = 3157907375U;
+        static const AkUniqueID PLAY_THUNDER = 3870462868U;
+        static const AkUniqueID RESTART = 1203400786U;
+        static const AkUniqueID STOP_BOUE_LOOP = 2891435548U;
     } // namespace EVENTS
 
     namespace SWITCHES
     {
+        namespace BOUE_STATE
+        {
+            static const AkUniqueID GROUP = 3874532484U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID S0 = 1584861492U;
+                static const AkUniqueID S1 = 1584861493U;
+                static const AkUniqueID S2 = 1584861494U;
+                static const AkUniqueID S3 = 1584861495U;
+            } // namespace SWITCH
+        } // namespace BOUE_STATE
+
         namespace MUSIC_STATE
         {
             static const AkUniqueID GROUP = 3826569560U;
 
             namespace SWITCH
             {
+                static const AkUniqueID MENU = 2607556080U;
                 static const AkUniqueID STATE_01 = 3794091078U;
                 static const AkUniqueID STATE_02 = 3794091077U;
                 static const AkUniqueID STATE_03 = 3794091076U;
@@ -35,6 +54,8 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID GP_BOUE = 403766500U;
+        static const AkUniqueID GP_INTENSITE_MER = 2750960087U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID RPM = 796049864U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;

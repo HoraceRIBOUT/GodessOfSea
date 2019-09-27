@@ -26,25 +26,66 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1726627313" Name="Play_Boue" ObjectPath="\Events\Default Work Unit\Play_Boue"/>
 				<Event Id="3457376640" Name="Play_Innit" ObjectPath="\Events\Default Work Unit\Play_Innit"/>
+				<Event Id="1278378707" Name="Play_Menu" ObjectPath="\Events\Default Work Unit\Play_Menu"/>
 				<Event Id="3157907375" Name="Play_Sea" ObjectPath="\Events\Default Work Unit\Play_Sea"/>
+				<Event Id="3870462868" Name="Play_Thunder" ObjectPath="\Events\Default Work Unit\Play_Thunder"/>
+				<Event Id="1203400786" Name="Restart" ObjectPath="\Events\Default Work Unit\Restart" MaxAttenuation="0.000000"/>
+				<Event Id="2891435548" Name="Stop_Boue_Loop" ObjectPath="\Events\Default Work Unit\Stop_Boue_Loop" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="84963989" Language="SFX">
+					<ShortName>GS_Musique_Main_State_03_Lp.wav</ShortName>
+					<Path>SFX/GS_Musique_Main_State_03_Lp_8956FC97.wem</Path>
+				</File>
+				<File Id="182108948" Language="SFX">
+					<ShortName>GS_Sfx_Boue_State_04_Lp.wav</ShortName>
+					<Path>SFX/GS_Sfx_Boue_State_04_Lp_8956FC97.wem</Path>
+				</File>
+				<File Id="272165306" Language="SFX">
+					<ShortName>GS_Amb_Thunder_03_os.wav</ShortName>
+					<Path>SFX/GS_Amb_Thunder_03_os_56D34C19.wem</Path>
+				</File>
 				<File Id="278773008" Language="SFX">
 					<ShortName>GS_Musique_State_01_Lp.wav</ShortName>
 					<Path>SFX/GS_Musique_State_01_Lp_8956FC97.wem</Path>
+				</File>
+				<File Id="368544383" Language="SFX">
+					<ShortName>GS_Sfx_Boue_State_01_Lp.wav</ShortName>
+					<Path>SFX/GS_Sfx_Boue_State_01_Lp_8956FC97.wem</Path>
 				</File>
 				<File Id="375114438" Language="SFX">
 					<ShortName>GS_Musique_State_02_Lp.wav</ShortName>
 					<Path>SFX/GS_Musique_State_02_Lp_8956FC97.wem</Path>
 				</File>
+				<File Id="634003924" Language="SFX">
+					<ShortName>GS_Sfx_Boue_State_03_Lp.wav</ShortName>
+					<Path>SFX/GS_Sfx_Boue_State_03_Lp_8956FC97.wem</Path>
+				</File>
+				<File Id="645210855" Language="SFX">
+					<ShortName>GS_Amb_Thunder_01_os.wav</ShortName>
+					<Path>SFX/GS_Amb_Thunder_01_os_56D34C19.wem</Path>
+				</File>
+				<File Id="659671953" Language="SFX">
+					<ShortName>GS_Musique_Main_State_02_Lp.wav</ShortName>
+					<Path>SFX/GS_Musique_Main_State_02_Lp_8956FC97.wem</Path>
+				</File>
+				<File Id="815502762" Language="SFX">
+					<ShortName>GS_Sfx_Boue_State_02_Lp.wav</ShortName>
+					<Path>SFX/GS_Sfx_Boue_State_02_Lp_8956FC97.wem</Path>
+				</File>
 				<File Id="833265569" Language="SFX">
 					<ShortName>GS_Amb_Sea_lp.wav</ShortName>
 					<Path>SFX/GS_Amb_Sea_lp_8956FC97.wem</Path>
 				</File>
-				<File Id="1066384859" Language="SFX">
-					<ShortName>GS_Musique_State_02_Basse_Lp.wav</ShortName>
-					<Path>SFX/GS_Musique_State_02_Basse_Lp_8956FC97.wem</Path>
+				<File Id="928524050" Language="SFX">
+					<ShortName>GS_Amb_Thunder_02_os.wav</ShortName>
+					<Path>SFX/GS_Amb_Thunder_02_os_56D34C19.wem</Path>
+				</File>
+				<File Id="1055152245" Language="SFX">
+					<ShortName>GS_Musique_Menu_Lp.wav</ShortName>
+					<Path>SFX/GS_Musique_Menu_Lp_8956FC97.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
